@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+    <welcome-file-list>
+       <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>messages</param-value>
+    </context-param>
+    <filter>
+        <filter-name>messageFilter</filter-name>
+        <filter-class>com.d3.bi.webcommon.filter.MessageFilter</filter-class>
+    </filter>
+
+
+
+  
+  <filter>
+	    <filter-name>Set Character Encoding</filter-name>
+	    <filter-class>com.jmsht.util.SetEncodingFilter</filter-class>
+	    <init-param>
+	        <param-name>encoding</param-name>
+	        <param-value>UTF-8</param-value>
+	    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>Set Character Encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  	<servlet>
+        <servlet-name>img</servlet-name>
+        <servlet-class>com.jmsht.util.AuthImg</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>img</servlet-name>
+	    <url-pattern>/authImg</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+		<param-name>config</param-name>
+			<param-value>
+				/WEB-INF/struts-config-load.xml,/WEB-INF/struts-config-syweb.xml,/WEB-INF/struts-config-dic.xml,
+				/WEB-INF/struts-config-symymenu.xml,/WEB-INF/struts-config-syauthority.xml,/WEB-INF/struts-config-admindata.xml,
+				/WEB-INF/struts-config-tjix.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern >*.do</url-pattern>
+    </servlet-mapping>
+		<filter>  
+			<filter-name>UrlRewriteFilter</filter-name>  
+	       	<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>  
+	       	<init-param>  
+	           <param-name>confPath</param-name>  
+	           <param-value>/WEB-INF/urlrewrite.xml</param-value>  
+	       	</init-param>  
+	       	<init-param>  
+	           <param-name>logLevel</param-name>  
+	           <param-value>WARN</param-value>  
+	       	</init-param> 
+	       	<init-param>
+				<param-name>statusEnabled</param-name>
+				<param-value>false</param-value>
+			</init-param>
+	   	</filter>  
+	    <filter-mapping>  
+	       <filter-name>UrlRewriteFilter</filter-name>  
+	       <url-pattern>/*</url-pattern>  
+	       <dispatcher>REQUEST</dispatcher>  
+	       <dispatcher>FORWARD</dispatcher>  
+	    </filter-mapping> 
+	    
+	        <filter>
+        <filter-name>sessionfilter</filter-name>
+        <filter-class>com.jrails.session.local.filter.LocalSessionFilter</filter-class>
+        <init-param>
+            <param-name>uuid</param-name>
+            <param-value></param-value>
+        </init-param>    
+    </filter>
+
+    <filter-mapping>
+        <filter-name>sessionfilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	    
+	    <!--
+		<filter>
+			<filter-name>IsLoginFilter</filter-name>
+			<filter-class>com.diching.util.IsLoginFilter</filter-class>
+		</filter>
+		<filter-mapping>
+			<filter-name>IsLoginFilter</filter-name>
+			<url-pattern>/*</url-pattern>
+		</filter-mapping> 
+		
+		
+		 拦截js,css
+	 <filter>
+		<filter-name>IsLoginFilter</filter-name>
+		<filter-class>
+			 com.diching.util.SqlInjectFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>IsLoginFilter</filter-name>
+		<url-pattern>/web/admin/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IsLoginFilter</filter-name>
+		<url-pattern>/web/admin/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>IsLoginFilter</filter-name>
+		<url-pattern>/web/admin/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IsLoginFilter</filter-name>
+		<url-pattern>/web/ads/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IsLoginFilter</filter-name>
+		<url-pattern>/web/js/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IsLoginFilter</filter-name>
+		<url-pattern>/web/jsp/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IsLoginFilter</filter-name>
+		<url-pattern>/web/sedh/*</url-pattern>
+	</filter-mapping>
+-->
+	<servlet>
+		<servlet-name>initConstantsServlet</servlet-name>
+	    <servlet-class>com.d3.bi.webcommon.servlet.InitConstantsServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/applicationContext-ejbconfig.xml
+		</param-value>
+	</context-param>
+	<!-- 
+	<context-param>
+	 	<param-name>socketPort</param-name>
+	 	<param-value>8885</param-value>
+	</context-param>
+	<listener>
+		<description>Socket</description>
+		<listener-class>com.zi5xian.util.ServerSocketListener</listener-class>
+	</listener>
+	 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+    <listener>
+        <listener-class>com.opensymphony.xwork.spring.SpringObjectFactoryListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>webworkAction</servlet-name>
+        <servlet-class>com.opensymphony.webwork.dispatcher.ServletDispatcher</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    
+    
+  <servlet>
+    <servlet-name>FileUpLoad</servlet-name>
+    <servlet-class>com.jmsht.web.action.FileUpLoad</servlet-class>
+  </servlet>
+
+
+     <servlet-mapping>
+        <servlet-name>webworkAction</servlet-name>
+        <url-pattern>*.wts</url-pattern>
+    </servlet-mapping>
+    
+  <servlet-mapping>
+    <servlet-name>FileUpLoad</servlet-name>
+    <url-pattern>/FileUpLoad</url-pattern>
+  </servlet-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/500.jsp</location>
+    </error-page>
+   
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<!--  
+<security-constraint>
+    <display-name>Tomcat Configuration Security Constraint</display-name>
+    <web-resource-collection>
+      <web-resource-name>Protected Area</web-resource-name>
+      <url-pattern>/webtools/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+</security-constraint>
+-->
+<security-constraint>
+<web-resource-collection>
+     <web-resource-name>fortune</web-resource-name>
+     <url-pattern>/*</url-pattern>
+     <http-method>PUT</http-method>
+     <http-method>DELETE</http-method>
+     <http-method>HEAD</http-method>
+     <http-method>OPTIONS</http-method>
+     <http-method>TRACE</http-method>
+</web-resource-collection>
+<auth-constraint></auth-constraint>
+</security-constraint>
+<login-config>
+<auth-method>BASIC</auth-method>
+</login-config>
+ 
+<!--  
+<login-config>
+  <auth-method>BASIC</auth-method>
+  <realm-name>Private area!</realm-name>
+</login-config>
+-->
+<security-role>
+    <description>
+      The role that is required to log in to the Administration Application
+    </description>
+    <role-name>admin</role-name>
+</security-role>
+
+</web-app>                                                         

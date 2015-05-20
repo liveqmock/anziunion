@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="/dic"
+		class="com.jmsht.web.action.DiCManagerAction" singleton="false">
+		<property name="serviceProxy">
+			<ref bean="JmshtServiceProxy" />
+		</property>
+		<property name="util">
+			<ref bean="loadRefenceBean"/>
+		</property>
+		<property name="serviceId">
+			<value>DiCManager</value>
+		</property>
+		<property name="methodNames">
+	<value>saveMerchantsReg,saveMerchantsRegInfo,saveMerchantsRegBank,saveShop,updateMembers,delShop,getUser,updateBankcard,saveVip,updateVip,removeVip,saveImportVip,updateShop,saveVipCard,vipcardList,vipcardNameList,findByIdVipCard,getUserNameVipList,getUserVipList,checkPhone,getbankcard,getposcode,getUserInfoList,getSalesNameList,getSalesList,getFuzzyAuditShopList,getFuzzyBackShopList,getFuzzyShopList,getAuditShopList,getBackShopList,getThroughShopList,findByIdShop,getUserinfo,updateadvance,getuserList,typeList,vipCardOrder,vipCardOrderTime,getMerchantsUserList,getContractList,getUserOne,updateUserOne,orderList,userlogoList,getBankMessageByCard,saveTemplatevip,getTemplatevip,orderChartList,updateTakePasswod,salesProduct,getVip,indexList,getSpreadIntegralByUid,savehivemid,getMerchantsHiveDetail,saveMerchantsHive,getUserHiveByUid,getMerchantsHiveByMid,saveHiveFenRun,saveCheckBankRecord,updateMerchantsBankState,getUserIntegralTotal,saveUserIntegralTotal,getMerchantsIntegralTotal,saveMerchantsIntegralTotal,getMerchantsIdBySigen,getMerchantsSigenByMid,merchantsBindbank</value>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <!--bean id="ejbConfig" class="com.d3.bi.ejbproxy.impl.EjbConfigImpl" singleton="true">
+        <property name="ejbJndiNames"><value>d3bi/ejb/D3biServiceBean,d3bi/ejb/D3biServiceBean</value></property>
+		<property name="ejb3JndiNames"><value>Ejb3DelegateBean/remote,Ejb3DelegateBean/remote</value></property>
+        <property name="urls"><value>jnp://127.0.0.1:1199,jnp://127.0.0.1:1099</value></property>
+        <property name="contextFactoryName"><value>org.jnp.interfaces.NamingContextFactory</value></property>
+		<property name="namingFacoryUrlPkg"><value>org.jboss.naming:org.jnp.interfaces</value></property>
+    </bean-->
+	<!--bean id="ejbHomeCache" class="com.d3.bi.ejbproxy.util.EjbHomeCache" singleton="true">
+		<property name="config"><ref bean="ejbConfig"/></property>
+	</bean-->
+	<!--bean id="smsServiceProxy" class="com.d3.bi.ejbproxy.impl.ServiceProxyLocalImpl" singleton="true">
+	</bean-->
+	<bean id="JmshtServiceProxy" class="com.d3.bi.ejbproxy.impl.ServiceProxyLocalImpl" singleton="true"/>
+</beans>

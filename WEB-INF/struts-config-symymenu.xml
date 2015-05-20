@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="mymenuForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="appapk" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="appios" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="pageid" type="java.lang.String" />
+			<form-property name="fr" type="java.lang.String" />
+			<form-property name="p" type="java.lang.String" />
+			<form-property name="cid" type="java.lang.String" />
+			<form-property name="pid" type="java.lang.String" />
+			<form-property name="url" type="java.lang.String" />	
+			<form-property name="channel" type="java.lang.String"/>
+			<form-property name="key" type="java.lang.String"/>
+			<form-property name="key1" type="java.lang.String"/>
+			<form-property name="years" type="java.lang.String"/>
+			<form-property name="month" type="java.lang.String"/>
+			<form-property name="day" type="java.lang.String"/>
+			<form-property name="hour" type="java.lang.String"/>
+			<form-property name="content" type="java.lang.String" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="gender" type="java.lang.String" />
+			<form-property name="imei" type="java.lang.String"/>
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="date" type="java.lang.String" />
+			<form-property name="number" type="java.lang.String"/>
+			<form-property name="pageNum" type="java.lang.String" />
+			<form-property name="numPerPage" type="java.lang.String" />
+			<form-property name="startDate" type="java.lang.String" />
+			<form-property name="endDate" type="java.lang.String" />
+		</form-bean>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/mymenu"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="mymenuForm" parameter="method" scope="request" validate="false">
+		<forward name="menulist" path="/web/authority/menulist.jsp" />
+		<forward name="menu" path="/web/authority/addmenu.jsp" />
+		<forward name="modifymenu" path="/web/authority/menumodify.jsp"></forward>
+		</action>
+		
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="authorityForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+		<form-property name="type" type="java.lang.String" />
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="pageid" type="java.lang.String" />
+			<form-property name="fr" type="java.lang.String" />
+			<form-property name="p" type="java.lang.String" />
+			<form-property name="cid" type="java.lang.String" />
+			<form-property name="url" type="java.lang.String" />	
+			<form-property name="channel" type="java.lang.String"/>
+			<form-property name="key" type="java.lang.String"/>
+			<form-property name="keyword" type="java.lang.String"/>
+			<form-property name="key1" type="java.lang.String"/>
+			<form-property name="key2" type="java.lang.String"/>
+			<form-property name="content" type="java.lang.String" />
+			<form-property name="contact" type="java.lang.String" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="a" type="java.lang.String" />
+			<form-property name="stars" type="java.lang.String" />
+			<form-property name="pid" type="java.lang.String" />
+			<form-property name="status" type="java.lang.String" />
+			<form-property name="description" type="java.lang.String" />
+			<form-property name="pageNum"   type="java.lang.String" />
+			<form-property name="numPerPage"   type="java.lang.String" />
+			<form-property name="password"   type="java.lang.String" />
+		</form-bean>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/authority"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="authorityForm" parameter="method" scope="request" validate="false">
+		<forward name="authoritylist" path="/web/authority/authoritylist.jsp" />
+		<forward name="authority" path="/web/authority/addauthority.jsp" />
+		<forward name="usertoauthlist" path="/web/authority/usertoauthlist.jsp" />
+		
+		<forward name="to_invest_index" path="/cglib/wealth/index.jsp" />
+		
+		<forward name="to_pionner_index" path="/cglib/pioneer/index.jsp" />
+		
+		<forward name="to_merchants_subscribe" path="/cglib/pay/index.jsp" />
+		
+		<forward name="to_invenst_list" path="/cglib/wealth/merchants.jsp" />
+		
+		<forward name="to_buy_invenst" path="/cglib/wealth/buy.jsp" />
+		
+		<forward name="to_invest_spread" path="/cglib/wealth/spread.jsp" />
+		
+		<forward name="to_submit_pay" path="/cglib/pay/check.jsp" />
+		
+		<forward name="to_merchants_poineer_pay" path="/cglib/pioneer/pay.jsp" />
+		
+		<forward name="to_pionner_detail" path="/cglib/pioneer/details.jsp" />
+		
+		<forward name="withdraw_detail" path="/cglib/pioneer/withdraw_deposit.jsp" />
+		<forward name="withdraw_deposit" path="/cglib/pioneer/withdraw.jsp" />
+		<forward name="withdraw_deposit_recommend" path="/cglib/pioneer/withdraw_recommend.jsp" />
+		
+		<forward name="to_toSeedetailsPioneer_detail" path="/cglib/pioneer/list.jsp"></forward>
+		<forward name="uporder" path="/cglib/order/uporder.jsp"></forward>
+
+		
+		<forward name="to_return_detail" path="/cglib/pioneer/level.jsp"></forward>
+		
+		
+
+		<forward name="to_bindbank" path="/cglib/register/register_bindbank.jsp"></forward>
+		
+		<forward name="notice_list" path="/cglib/announce/list.jsp"></forward>
+		<forward name="notice_Details" path="/cglib/announce/article.jsp"></forward>
+		
+
+		</action>
+		
+		
+	</action-mappings>
+</struts-config>

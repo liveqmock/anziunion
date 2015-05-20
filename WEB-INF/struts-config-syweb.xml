@@ -1,0 +1,62 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<form-bean name="mainForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="url" type="java.lang.String" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="userCode" type="java.lang.String" />		
+			<form-property name="newPassword" type="java.lang.String" />
+			<form-property name="reNewPassword" type="java.lang.String" />
+			<form-property name="netid" type="java.lang.String" />
+			<form-property name="sortid" type="java.lang.String" />
+			<form-property name="netname" type="java.lang.String" />
+			<form-property name="neturl" type="java.lang.String" />
+			<form-property name="channelcode" type="java.lang.String" />
+			<form-property name="orderby" type="java.lang.String" />
+			<form-property name="status" type="java.lang.String" />
+			<form-property name="username" type="java.lang.String" />
+			<form-property name="password" type="java.lang.String" />
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="displaytype" type="java.lang.String" />
+			<form-property name="pageid" type="java.lang.String" />
+			<form-property name="channel" type="java.lang.String" />
+			<form-property name="channelid" type="java.lang.String" />
+			<form-property name="viewdatebeg" type="java.lang.String" />
+			<form-property name="viewdateend" type="java.lang.String" />	
+			<form-property name="secondpage" type="java.lang.String" />	
+			<form-property name="ua" type="java.lang.String" />		
+			<form-property name="webname" type="java.lang.String" />	
+			<form-property name="address" type="java.lang.String" />	
+			<form-property name="telephone" type="java.lang.String" />	
+			<form-property name="mailbox" type="java.lang.String" />
+			<form-property name="begindate" type="java.lang.String" />	
+			<form-property name="enddate" type="java.lang.String" />
+			<form-property name="restype" type="java.lang.String" />
+			<form-property name="regimg" type="java.lang.String" />
+			<form-property name="littleimage" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="currentPageNo" type="java.lang.String" />
+			<form-property name="usercode" type="java.lang.String" />
+			<form-property name="pageNum"   type="java.lang.String" />
+			<form-property name="numPerPage"   type="java.lang.String" />
+		</form-bean>		
+	</form-beans>
+
+	<action-mappings>		
+		<!-- 后台首页 -->
+		<action path="/main"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="mainForm" parameter="method" scope="request"
+			validate="false">
+			<forward name="sepvstatis" path="/web/sepvstatis.jsp" />
+			<forward name="seallchannel" path="/web/seallchannel.jsp" />
+			<forward name="semain" path="/web/semain.jsp" />
+			<forward name="sefail" path="/web/seadmintjixindex.jsp.jsp" />
+			<forward name="userlist" path="/web/authority/userlist.jsp"></forward>
+			<forward name="seindexerror" path="/web/seindexerror.jsp"></forward>
+			<forward name="userlistone" path="/web/authority/user/userlist.jsp"></forward>
+		</action>	
+	</action-mappings>
+
+</struts-config>

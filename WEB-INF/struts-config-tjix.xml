@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		
+		<form-bean name="TjixForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="pageNum" type="java.lang.String" />
+			<form-property name="numPerPage" type="java.lang.String" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="username" type="java.lang.String" />
+			<form-property name="license" type="java.lang.String" />
+			<form-property name="cardfielis" type="org.apache.struts.upload.FormFile" />
+			<form-property name="cardfielthe" type="org.apache.struts.upload.FormFile" />
+			<form-property name="licensefile" type="org.apache.struts.upload.FormFile" />
+			<form-property name="fileImgs" type="org.apache.struts.upload.FormFile" />
+			<form-property name="province" type="java.lang.String"/>
+			<form-property name="city" type="java.lang.String"/>
+			<form-property name="county" type="java.lang.String"/>
+			<form-property name="address" type="java.lang.String"/>
+			<form-property name="mobile" type="java.lang.String" />
+			<form-property name="code" type="java.lang.String" />
+			<form-property name="password" type="java.lang.String" />
+			<form-property name="card" type="java.lang.String" />
+			<form-property name="cid" type="java.lang.String" />
+			<form-property name="userid" type="java.lang.String" />
+			<form-property name="oldpassword" type="java.lang.String" />
+			<form-property name="newpassword" type="java.lang.String" />
+			<form-property name="advertising" type="java.lang.String" />
+			<form-property name="context" type="java.lang.String" />
+			<form-property name="description" type="java.lang.String" />
+			<form-property name="number" type="java.lang.String" />
+			<form-property name="pice" type="java.lang.String" />
+			<form-property name="pice2" type="java.lang.String" />
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="operation" type="java.lang.String" />
+			<form-property name="flag" type="java.lang.String" />
+			<form-property name="takemoney" type="java.lang.String" />
+			<form-property name="allmoney" type="java.lang.String" />
+			<form-property name="storename" type="java.lang.String" />
+			<form-property name="scope" type="java.lang.String" />
+			<form-property name="begin1" type="java.lang.String" />
+			<form-property name="end1" type="java.lang.String" />
+			<form-property name="begin2" type="java.lang.String" />
+			<form-property name="end2" type="java.lang.String" />
+			<form-property name="begin3" type="java.lang.String" />
+			<form-property name="end3" type="java.lang.String" />
+			<form-property name="note" type="java.lang.String" />
+			<form-property name="coordinates" type="java.lang.String" />
+			<form-property name="taxcard" type="java.lang.String" />
+			<form-property name="organization" type="java.lang.String"/>
+	        <form-property name="amount" type="java.lang.String" />
+			<form-property name="after_integral" type="java.lang.String" />
+			<form-property name="owithdrawdate" type="java.lang.String"/>
+			<form-property name="accredit" type="java.lang.String" />	
+			<form-property name="tid" type="java.lang.String" />
+			<form-property name="parameter" type="java.lang.String" />
+			<form-property name="parameter1" type="java.lang.String" />
+			<form-property name="editorValue" type="java.lang.String" />
+			<form-property name="account" type="java.lang.String" />
+			<form-property name="brand" type="java.lang.String" />
+			<form-property name="date" type="java.lang.String" />
+		
+		</form-bean>
+		
+	
+		
+	</form-beans>
+
+	<action-mappings>
+		<action path="/tjix"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="TjixForm" parameter="method" scope="request"
+			validate="false">
+			<forward name="product_list" path="/cglib/product/product_list.jsp" />
+			<forward name="product_count" path="/cglib/product/product_count.jsp" />
+			
+			<forward name="product_audit" path="/cglib/product/product_audit.jsp" />
+			<forward name="product_notby" path="/cglib/product/product_notby.jsp" />
+			<forward name="product_cancel" path="/cglib/product/product_cancel.jsp" />
+			<forward name="getManagement" path="/cglib/product/product_add.jsp" />
+			<forward name="getUpdateManagement" path="/cglib/product/product_update.jsp" />
+			<forward name="getsettlementList" path="/cglib/bill/bill_withdraw.jsp" />
+			<forward name="gettakemoneyList" path="/cglib/bill/bill_members.jsp" />
+			<forward name="gettakeintegralList" path="/cglib/bill/integral_members.jsp" />
+			<forward name="product_add" path="/cglib/product/product_add.jsp" />
+			<forward name="getincomedetailmoneyList" path="/cglib/bill/bill_pos.jsp" />
+			<forward name="getOrdrdatarecordList" path="/cglib/bill/bill_sales.jsp" />
+			<forward name="getOrdrdatarecordOne" path="/cglib/dialog/order.jsp" />
+			<forward name="getorderBuyList" path="/cglib/bill/bill_buy.jsp" />
+			<forward name="hive" path="/cglib/activites/hive.jsp" />
+			<forward name="register_basic" path="/cglib/register/register_basic.jsp" />
+			
+			<forward name="to_add_goods" path="/cglib/product/product_add.jsp" />
+			
+		</action>
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="/main"
+		class="com.jmsht.web.action.SyWebInfoManagerAction" singleton="false">
+		<property name="serviceProxy">
+			<ref bean="JmshtServiceProxy" />
+		</property>
+		<property name="serviceId">
+			<value>SyWebInfoManager</value>
+		</property>
+		
+		<property name="records">
+			<value>50</value>
+		</property>
+		<property name="pageSizeValue">
+			<value>10</value>
+		</property>
+		<property name="methodNames">
+			<value>getSeUserInfo,getUserInfoList,saveUser,removeUser,updateUserPassword</value>
+		</property>
+		<property name="util">
+			<ref bean="loadRefenceBean"/>
+		</property>	
+		
+	</bean>
+</beans>

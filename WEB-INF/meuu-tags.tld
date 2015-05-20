@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="GB2312"?> 
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+	<tlibversion>1.1</tlibversion>
+	<jspversion>1.2</jspversion>
+	<shortname>View Html Tag Library</shortname>
+	<info>DataDropDownList control</info>
+	
+	<tag>
+		<name>Date</name>
+		<tagclass>com.d3.bi.webcommon.tags.DateTag</tagclass>
+		<bodycontent>empty</bodycontent>
+		<attribute>
+			<name>property</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>beanName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>format</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+		<attribute>
+			<name>styleClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+		<attribute>
+			<name>size</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+                <attribute>
+			<name>readonly</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+                <attribute>
+			<name>dlgWidth</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+                <attribute>
+			<name>dlgHeight</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>ListPage</name>
+		<tagclass>com.d3.bi.auth.web.ListPageTag</tagclass>
+		<bodycontent>empty</bodycontent>		
+		<attribute>
+			<name>url</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>				
+		<attribute>
+			<name>pageSize</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>data</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+
+		<attribute>
+			<name>hasName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+	</tag>		
+    <tag>
+		<name>DynselectCommon</name>
+		<tagclass>com.d3.bi.webcommon.tags.DynselectCommon</tagclass>
+		<bodycontent>empty</bodycontent>		
+		<attribute>
+			<name>selectName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>selectType</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+			
+		<attribute>
+			<name>styleClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		<attribute>
+			<name>display</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		
+		<attribute>
+			<name>selectData</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		<attribute>
+			<name>listName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>isAdd</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+							
+</tag>		
+<tag>
+		<name>StatResultTag</name>
+		<tagclass>com.d3.bi.webcommon.tags.StatResultTag</tagclass>
+		<bodycontent>empty</bodycontent>		
+		<attribute>
+			<name>resultArrayName</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>resultHeaderName</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+			
+		<attribute>
+			<name>ifGraphicName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		<attribute>
+			<name>resultHeaderForJFeechart</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		
+		<attribute>
+			<name>graphicDemision</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		<attribute>
+			<name>isDetail</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>isLink</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>rowIdIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>rowNameIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statObjectIdIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statObjectNameIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statNumIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>titleName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>																				
+</tag>		
+
+<tag>
+		<name>JFreeChartTag</name>
+		<tagclass>com.d3.bi.webcommon.tags.JFreeChartTag</tagclass>
+		<bodycontent>empty</bodycontent>		
+		<attribute>
+			<name>resultArrayName</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>resultHeaderName</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+				
+		<attribute>
+			<name>resultHeaderForJFeechart</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		
+		<attribute>
+			<name>graphicDemision</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		<attribute>
+			<name>isDetail</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>isLink</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>rowIdIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>rowNameIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statObjectIdIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statObjectNameIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>statNumIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>titleName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>																				
+</tag>		
+
+
+	<tag>
+		<name>Select</name>
+		<tagclass>com.d3.bi.webbusiness.tags.SelectDown</tagclass>
+		<bodycontent>empty</bodycontent>		
+		<attribute>
+			<name>property</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>frmName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+		<attribute>
+			<name>with</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+		<attribute>
+			<name>styleClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+		<attribute>
+			<name>subProperty</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	
+	    <attribute>
+			<name>sub_subProperty</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>						
+	</tag>			
+
+
+	<tag>
+		<name>SelectJob</name>
+		<tagclass>com.d3.bi.webbusiness.tags.SelectJob</tagclass>
+		<bodycontent>empty</bodycontent>		
+		<attribute>
+			<name>selectName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+			
+		<attribute>
+			<name>styleClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		<attribute>
+			<name>display</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+							
+	</tag>		
+
+
+	<tag>
+		<name>SelectCommon</name>
+		<tagclass>com.d3.bi.webbusiness.tags.SelectCommon</tagclass>
+		<bodycontent>empty</bodycontent>		
+		<attribute>
+			<name>selectName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>selectType</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+			
+		<attribute>
+			<name>styleClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		<attribute>
+			<name>display</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+							
+	</tag>		
+
+
+
+</taglib>

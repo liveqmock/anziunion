@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean name="/authority"
+		class="com.jmsht.web.action.SyAuthorityManagerAction" singleton="false">
+		<property name="serviceProxy">
+			<ref bean="JmshtServiceProxy" />
+		</property>
+		<property name="util">
+			<ref bean="loadRefenceBean" />
+		</property>
+		<property name="serviceId">
+			<value>SyAuthorityManager</value>
+		</property>
+		<property name="methodNames">
+			<value>saveMerchantsInvenstOrder,getInvenstOrderByOrderno,updateMerchantsInvenstState,getInvenstOrderByMid,getInvenstOrderByTmid,getMerchantsTmid,getInvenstSigenByMid,updateTmidIntegralTotal,savePionnerBusiness,updateMerchantsPioneerState,updatePioneerDate,toSeedetailsPioneer,updateBanks,updateSettlement,updatePioneerManagerDate,updateNotice,updateBonus,updateBonusState</value>
+		</property>
+		<property name="pageSizeValue">
+			<value>20</value>
+		</property>
+		<property name="records">
+			<value>50</value>
+		</property>
+	</bean>
+</beans>

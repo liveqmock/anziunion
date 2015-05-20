@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="AdminForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="appapk" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="appios" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="file" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="image" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="imageone" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="imagetwo" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="imagethree" type="org.apache.struts.upload.FormFile"/>
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="mobile" type="java.lang.String" />
+			<form-property name="order_id" type="java.lang.String" />
+			<form-property name="user" type="java.lang.String" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="pice" type="java.lang.String" />
+			<form-property name="brand" type="java.lang.String" />
+			<form-property name="path" type="java.lang.String" />
+			<form-property name="pageid" type="java.lang.String" />
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="fr" type="java.lang.String" />
+			<form-property name="p" type="java.lang.String" />
+			<form-property name="cid" type="java.lang.String" />
+				<form-property name="tid" type="java.lang.String" />
+			<form-property name="url" type="java.lang.String" />	
+			<form-property name="channel" type="java.lang.String"/>
+			<form-property name="key" type="java.lang.String"/>
+			<form-property name="key1" type="java.lang.String"/>
+			<form-property name="years" type="java.lang.String"/>
+			<form-property name="month" type="java.lang.String"/>
+			<form-property name="day" type="java.lang.String"/>
+			<form-property name="hour" type="java.lang.String"/>
+			<form-property name="content" type="java.lang.String" />
+			<form-property name="gender" type="java.lang.String" />
+			<form-property name="imei" type="java.lang.String"/>
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="date" type="java.lang.String" />
+			<form-property name="number" type="java.lang.String"/>
+			<form-property name="pageNum" type="java.lang.String" />
+			<form-property name="numPerPage" type="java.lang.String" />
+			<form-property name="startDate" type="java.lang.String" />
+			<form-property name="endDate" type="java.lang.String" />
+			<form-property name="mac" type="java.lang.String" />
+			<form-property name="state" type="java.lang.String" />
+			<form-property name="flag" type="java.lang.String" />
+			<form-property name="good_id" type="java.lang.String" />
+			<form-property name="profit" type="java.lang.String" />
+				<form-property name="total_money" type="java.lang.String" />
+		</form-bean>		
+	</form-beans>
+
+	<action-mappings>		
+		<action path="/admin"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="AdminForm" parameter="method" scope="request"
+			validate="false">
+			<!--<forward name="one181list" path="/web/tjix/one181list.jsp" />
+			<forward name="one181update" path="/web/tjix/one181update.jsp" />
+			<forward name="ratelist" path="/web/tjix/ratelist.jsp" />
+			<forward name="rateupdate" path="/web/tjix/rateupdate.jsp" />
+			<forward name="daytolist" path="/web/tjix/daytolist.jsp" />
+			<forward name="daytoupdate" path="/web/tjix/daytoupdate.jsp" />
+			<forward name="personalityList" path="/web/tjix/personalityList.jsp" />
+			<forward name="personalityUpdate" path="/web/tjix/personalityUpdate.jsp" />
+			<forward name="characterTemperList" path="/web/tjix/characterTemperList.jsp" />
+			<forward name="characterTemperUpdate" path="/web/tjix/characterTemperUpdate.jsp" />
+			<forward name="meetinglist" path="/web/tjix/hq/meetinglist.jsp" />
+			<forward name="meetingupdate" path="/web/tjix/hq/meetingupdate.jsp" />
+			<forward name="appchannellist" path="/web/tjix/app/appchannel/appchannellist.jsp" />
+			<forward name="applist" path="/web/tjix/app/applist.jsp" />
+			<forward name="appupdate" path="/web/tjix/app/appupdate.jsp" />
+			<forward name="daySelectionlist" path="/web/tjix/daySelectionList.jsp" />
+			<forward name="daySelectionupdate" path="/web/tjix/daySelectionUpdate.jsp" />
+			<forward name="gossiplist" path="/web/tjix/gossipList.jsp" />
+			<forward name="gossipupdate" path="/web/tjix/gossipUpdate.jsp" />
+			<forward name="accesslog" path="/web/tjix/accesslog/accesslog.jsp" />
+			<forward name="functionlist" path="/web/tjix/function/functionList.jsp" />
+			<forward name="functionpdate" path="/web/tjix/function/functionUpdate.jsp" />
+			<forward name="titlelist" path="/web/tjix/title/titlelList.jsp" />
+			<forward name="titleupdate" path="/web/tjix/title/titlelUpdate.jsp" />
+			<forward name="phraselist" path="/web/tjix/title/phraseList.jsp" />
+			<forward name="phraseupdate" path="/web/tjix/title/phraseUpdate.jsp" />
+			<forward name="zenlist" path="/web/tjix/zen/zenList.jsp" />
+			<forward name="zenupdate" path="/web/tjix/zen/zenUpdate.jsp" />
+			<forward name="malllist" path="/web/tjix/mall/mallList.jsp" />
+			<forward name="mallupdate" path="/web/tjix/mall/mallUpdate.jsp" />
+			<forward name="bannerlist" path="/web/tjix/mall/banner/bannerList.jsp" />
+			<forward name="bannerupdate" path="/web/tjix/mall/banner/bannerUpdate.jsp" />
+			<forward name="beingpushedlist" path="/web/tjix/beingpushed/beingpushedlist.jsp" />
+			<forward name="beingpushedpdate" path="/web/tjix/beingpushed/beingpushedupdate.jsp" />
+			<forward name="sordlist" path="/web/tjix/manage/sord/sordlist.jsp" />
+			<forward name="sorduplist" path="/web/tjix/manage/sord/sorduplist.jsp" />
+			<forward name="mkulist" path="/web/tjix/manage/mku/mkulist.jsp" />
+			<forward name="mrlist" path="/web/tjix/manage/mr/mrlist.jsp" />
+			<forward name="consumptionlist" path="/web/tjix/manage/consumption/consumptionlist.jsp" />
+			<forward name="kongminlightlist" path="/web/tjix/manage/kongmin/kongminlightlist.jsp" />
+			<forward name="userinfolist" path="/web/tjix/manage/user/userinfolist.jsp" />
+		    -->
+		    <forward name="goodlist" path="/cglib/activites/straddling_plaza.jsp"/>
+		     <forward name="orderlist" path="/cglib/activites/straddling.jsp"/>	
+		     <forward name="index" path="/cglib/activites/straddling.jsp"/>
+		     <forward name="pubmethod" path="/cglib/activites/straddling.jsp"/>	
+		     <forward name="fivelist" path="/cglib/activites/hive_number.jsp"/>	
+		     <forward name="integral" path="/cglib/bill/integral_withdraw.jsp"/>	
+		     <forward name="publish_list" path="/cglib/activites/publishgoods.jsp"/>	
+		     
+		    	
+		</action>		
+	</action-mappings>
+
+</struts-config>

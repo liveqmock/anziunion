@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+                value="[%p] %d{yyyy-MM-dd HH:mm:ss} [%l] %m%n"/>
+ <!-- 
+            <param name="ConversionPattern"
+                value="%-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] %m%n"/>
+          <param name="ConversionPattern"
+                value="%p - %C{1}.%M(%L) | %m%n"/>-->
+        </layout>
+    </appender>
+
+	<appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/data/logs/anzipay/catalina.out"/>
+		<param name="Append" value="true"/>
+        <param name="ImmediateFlush" value="true"/>
+        <param name="MaxFileSize" value="500KB"/> 
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                value="[%p] %d{yyyy-MM-dd HH:mm:ss} [%l] %m%n"/>
+        </layout>
+		<filter class="org.apache.log4j.varia.LevelMatchFilter"> 
+			<param name="LevelToMatch" value="ERROR"/>  
+	        <param name="acceptOnMatch" value="false"/>      
+        </filter> 
+    </appender>
+    
+	<appender name="statLogfile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/anzipay/enter.log" />       
+        <param name="DatePattern" value="'_'yyyy-MM-dd" />       
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                value="[%p] %d{yyyy-MM-dd HH:mm:ss} %m%n"/>
+        </layout>
+    </appender>
+
+	
+	<appender name="clientLogfile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/logs/anzipay/active.log" />       
+        <param name="DatePattern" value="'_'yyyy-MM-dd" />       
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                value="[%p] %d{yyyy-MM-dd HH:mm:ss}%m%n"/>
+        </layout>
+    </appender>
+    
+    <logger name="org.apache">
+        <level value="WARN"/>
+    </logger>
+
+    <logger name="net.sf.hibernate">
+        <level value="WARN"/>
+    </logger>
+
+    <logger name="org.springframework">
+        <level value="WARN"/>
+    </logger>
+
+    <logger name="org.appfuse">
+        <level value="WARN"/>
+    </logger>
+
+	<logger name="com.d3">
+        <level value="WARN"/>
+    </logger>
+
+	<logger name="statLogger">
+        <level value="INFO"/>
+		<appender-ref ref="statLogfile"/>
+    </logger>
+
+	
+	<logger name="clientLogger">
+        <level value="INFO"/>
+		<appender-ref ref="clientLogfile"/>
+    </logger>
+    
+    <root>
+        <level value="WARN"/>
+        <appender-ref ref="CONSOLE"/>
+		<appender-ref ref="FILE"/>
+    </root>
+
+</log4j:configuration>

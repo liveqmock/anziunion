@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+  <definition name="stat.statDetailResult" extends="baseDef">
+  	 <put name="body" value="/96333/result/statDetailResult.jsp" />
+  </definition> 
+   
+  <definition name="layout.displaytag.result" extends="baseDef">
+	  <put name="body"  value="/layouts/displaytaglayout.jsp" />
+  </definition>
+    <definition name="layout.extremecomponents.result" extends="baseDef">
+	  <put name="body"  value="/ecLayout.do" />
+  </definition>
+
+  <definition name="layout.extremecomponents.result2" extends="baseDef">
+	  <put name="body"  value="/ecLayout2.do" />
+  </definition>
+
+  <definition name="layout.extremecomponents.floatHeader" extends="baseDef">
+	  <put name="body"  value="/ecLayout3.do" />
+  </definition>
+
+  <definition name="layout.extremecomponents.view" path="/layouts/eclayout.jsp">
+	  <put name="fontSize"  value="9" />
+  </definition>
+  <definition name="layout.extremecomponents.view2" path="/layouts/eclayout.jsp">
+	  <put name="fontSize"  value="11" />
+  </definition>
+
+  <definition name="layout.extremecomponents.view3" path="/layouts/ecFloatHeader.jsp">
+	  <put name="fontSize"  value="11" />
+  </definition>
+
+  <definition name="baseDef" path="/template/listLayout.jsp">
+  	 <put name="body" value="/template/empty.jsp"/>
+  </definition>
+    <definition name="d3.layout.resultpage" extends="baseDef">
+	  <put name="body"  value="/layouts/result.jsp" />
+  </definition>
+
+</tiles-definitions>

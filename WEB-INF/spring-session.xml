@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <description>JMSHT Session.</description>
+    
+	<bean id="serviceLocator" class="com.jrails.modules.spring.ServiceLocator"/>
+
+    <!-- 二进制文件处理 -->
+    <bean id="defaultLobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler" lazy-init="true"/>
+
+    <!-- 缓存管理器 -->
+    <bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" lazy-init="false">
+        <property name="configLocation">
+            <value>classpath:ehcache.xml</value>
+        </property>
+    </bean>
+
+    <!-- 本地Session缓存 -->
+    <bean id="localSessionCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean" lazy-init="false">
+        <property name="cacheManager">
+            <ref bean="ehcacheManager"/>
+        </property>
+        <property name="cacheName">
+            <value>localSessionCache</value>
+        </property>
+    </bean>
+
+    <!-- 本地Session管理器 -->
+    <bean id="localSessionManager" class="com.jrails.session.local.service.LocalSessionManager" lazy-init="false">
+        <!-- 与远程Session同步的间隔时间，单位毫秒，默认是1分钟 -->
+        <property name="synTime" value="5"/>
+        <property name="cache">
+            <ref bean="localSessionCache"/>
+        </property>
+    </bean>
+
+</beans>

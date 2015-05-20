@@ -1,0 +1,67 @@
+body{background: none;}
+
+
+.content{position: relative; }
+
+
+.bkg{position: relative;height: 700px; width: 100%;overflow: hidden;}
+.bkg img{position: absolute;left: 50%;top: 50%; margin-left: -960px;margin-top: -370px; }
+.bkg a{position: absolute;display: none;}
+
+
+
+.banner{position: relative; height: 400px;overflow: hidden;border-bottom: 1px solid #E5E5E5;}
+/*.banner:after{content: '';position: absolute; width: 100%;height: 1px;bottom: 0;left: 0;background: #fff;}*/
+.banner li{position: absolute;top: 0;left: 50%;width: 1920px;height: 400px; margin-left: -960px; vertical-align: top;text-align: center;}
+
+.slide_alt{display: none; position: absolute;left: 0;bottom: 0;width: 100%;height: 32px;line-height: 32px;background: rgba(0,0,0,0.5);}
+.slide_crl{ position: absolute;left: 50%;width: 400px;margin-left: -200px; bottom: 15px; text-align: center;text-align: center;}
+.slide_crl b{display:inline-block;position: relative; width:12px; height:12px;text-indent:-999em;background: rgba(0,0,0,0.2);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); border-radius:6px; overflow: hidden;margin:0 5px; cursor:pointer; behavior:url(/css/pie.htc); }
+.slide_crl b:hover{background: rgba(0,0,0,0.4);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000); }
+.slide_crl b.on{background: #f0450a;}
+
+
+
+
+
+.login{position: absolute;right: 50%;top: 117px; margin-top: 0px;margin-right:-500px; width: 288px;height: 350px; border-radius: 2px;
+	background: rgba(0,0,0,0.2); 
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
+}
+.login form{width: 250px; margin: 10px auto 38px;}
+.login form h2{line-height: 56px;font-size: 22px;font-weight: normal;color: #fff;}
+.login form cite{display: block;margin-bottom: 15px;margin-left: 0;}
+
+.login form input[type="text"],
+.login form input[type="password"]{width: 190px;padding:12px 5px 12px  53px;border: none; border-radius: 0;}
+.login form input[type="text"]:focus,
+.login form input[type="password"]:focus{box-shadow:none; }
+.login form input[type="submit"]{width: 250px;margin: 0;height: 50px;font-size: 18px;font-weight: bold; }
+.login form input[type="checkbox"]+span{margin-right: 0;color: #fff;}
+
+.login form label{line-height: 44px;}
+.login form label>img{vertical-align: top;left: 0px;top: 0px;height: 42px;background: #f0450a;}
+.login form label>em{left: 53px;}
+
+.login form b.checkcode{float: right;width: 80px; height: 40px;overflow: hidden; border:1px solid #cdcbcb; background: none;}
+.login form b.checkcode img{width: 100%;height: 100%;}
+.login form cite.form_remember{margin-top: -10px;margin-bottom: 5px;color:#ef4720;z-index:1;}
+
+.login form cite.form_remember em{float: right; text-align: right;}
+.login form cite.form_remember em a{text-decoration: underline;}
+.login form cite.form_remember label{line-height: 24px;float: left;margin-right: 5px;}
+.login form em{font-style: normal;}
+
+/*提示*/
+.login form cite>i.form-note-success{background-position: -8px center;}
+.login form cite>i.form-note-warn{ box-shadow:none;line-height: 30px;height: 30px;left:20px;top: -36px;background-position: -4px center;padding:0 22px;border-radius: 2px;box-shadow: 2px 2px 3px rgba(0,0,0,0.2)}
+.login form cite>i.form-note-warn:before{left: 12px;top: 31px;border-style: solid;border-width: 5px 5px 0 5px;border-color: #eabd2c transparent transparent transparent ;}
+.login form cite>i.form-note-warn:after{ left: 12px;top: 30px;border-style: solid;border-width: 5px 5px 0 5px;border-color: #fffdf2 transparent transparent transparent ;}
+.login form cite>i.form-note-error{ box-shadow:none;line-height: 30px;height: 30px;left:20px;top: -36px;background-position: -4px center;padding:0 22px;border-radius: 2px;box-shadow: 2px 2px 3px rgba(0,0,0,0.2)}
+.login form cite>i.form-note-error:before{left: 12px;top: 31px;border-style: solid;border-width: 5px 5px 0 5px;border-color: #fe0e0e transparent transparent transparent ;}
+.login form cite>i.form-note-error:after{ left: 12px;top: 30px;border-style: solid;border-width: 5px 5px 0 5px;border-color: #ffdbdb transparent transparent transparent ;}
+
+
+
+

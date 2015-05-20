@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <!-- ======================================== Form Bean Definitions -->
+    <form-beans>
+
+    </form-beans>
+    <!-- =================================== Global Exception Definitions -->
+    <global-exceptions>
+       <exception key="error.required" type="org.springframework.dao.DataAccessException"
+                  path="/failure/dataAccessFailure.jsp" />
+	   <exception key="error.required" type="com.d3.bi.basecommon.exception.DAOException"
+                  path="/failure/daoFailure.jsp" />
+       <exception key="error.required" type="com.d3.bi.basecommon.exception.ServiceException"
+                  path="/failure/serviceFailure.jsp" />
+	   <exception key="error.required" type="java.lang.NullPointerException"
+                  path="/failure/nullPointerFailure.jsp" />
+       <exception key="error.required" type="com.d3.bi.basecommon.exception.ActionException"
+                  path="/failure/generalFailure.jsp" />
+    </global-exceptions>
+
+    <!-- =================================== Global Forward Definitions -->
+    <global-forwards>
+        <forward name="errors" path="/failure/error.jsp" redirect="true"/>
+		<forward name="failure" path="/failure/ejbFailure.jsp" redirect="false"/>
+
+    </global-forwards>
+
+    <!-- =================================== Action Mapping Definitions -->
+    <action-mappings>
+
+    <!--Add by chenjb begin-->
+    <action path="/ecLayout" type="org.apache.struts.actions.ForwardAction"
+      		parameter="layout.extremecomponents.view"/>
+
+    <action path="/ecLayout2" type="org.apache.struts.actions.ForwardAction"
+      		parameter="layout.extremecomponents.view2"/>
+
+	<action path="/ecLayout3" type="org.apache.struts.actions.ForwardAction"
+      		parameter="layout.extremecomponents.view3"/>
+	</action-mappings>
+
+    <!-- ================================ Message Resources Definitions -->
+    <message-resources parameter="messages"/>
+
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+        <set-property property="contextConfigLocation"
+            value="/WEB-INF/applicationContext*.xml,/WEB-INF/action-servlet*.xml"/>
+    </plug-in>
+
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames" value="/WEB-INF/validator-rules.xml,
+                                        /WEB-INF/validation.xml"/>
+    </plug-in>
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin" >
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+	    <set-property property="moduleAware" value="true" />
+	</plug-in>
+</struts-config>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="/tjix"
+		class="com.jmsht.web.action.TjixCgibiManagerAction" singleton="false">
+		<property name="serviceProxy">
+			<ref bean="JmshtServiceProxy" />
+		</property>
+		<property name="util">
+			<ref bean="loadRefenceBean"/>
+		</property>
+		<property name="serviceId">
+			<value>TjixCgbiDataManager</value>
+		</property>
+		<property name="methodNames">
+	<value>get_info,getIntegralList,getIntegral,update_record,updateRetrievePassword,updateChangerMerchantsRegInfo,saveMerchantscommodity_add,saveMerchantsstores_add,updateMerchantscommodity,updateCommodity,getGoodsUpList,getGoodsUpNameList,getGoodsIdUpList,updateshelvesCommodity,getsettlementList,gettakemoneyList,updateSettlement,checktackpassword,gettakemoneyTime,getMerchantsInfoList,getincomedetailmoneyList,getincomedetailmoneyTime,getOrdrdatarecordList,getOrdrdatarecordTime,getOrdrdatarecordOne,updateorder,getOrdrcode,getRetrievePassWordUserList,getRetrieveCardUserList,getAccountPasswordList,saveapply,updatebanks,updateDelCommodity,getincomedetailpos,updateMerchantsIntegral,getUserAddressList,getMerchantsHiveDetails,getMerchantsHiveIntegral,getMerchantsHiveRealTime,getTgmidByUid,getMerchantsPossList,updateUserExchangeStatus</value>
+		</property>
+	</bean>
+</beans>

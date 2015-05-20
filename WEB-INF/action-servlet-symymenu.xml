@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean name="/mymenu"
+		class="com.jmsht.web.action.SyMYMenuManagerAction" singleton="false">
+		<property name="serviceProxy">
+			<ref bean="JmshtServiceProxy" />
+		</property>
+		<property name="util">
+			<ref bean="loadRefenceBean" />
+		</property>
+		<property name="serviceId">
+			<value>SyMYMenuManager</value>
+		</property>
+		<property name="methodNames">
+			<value>getMenuList,saveMenu,removeMenu,getUserMenuList,getAuthToMenu,updateAllAuthToMenu,updateAuthToMenu,getAuthToMenuOne,saveAuthToMenu,updateAuthToMenu2,getMenuListOne,updateMenu,getUseMenuOne</value>
+		</property>
+		<property name="pageSizeValue">
+			<value>20</value>
+		</property>
+		
+		<property name="records">
+			<value>50</value>
+		</property>
+	</bean>
+	
+</beans>

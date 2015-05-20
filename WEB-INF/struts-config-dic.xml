@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="DiCForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="pageNum" type="java.lang.String" />
+			<form-property name="numPerPage" type="java.lang.String" />
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="cid" type="java.lang.String" />
+			<form-property name="bid" type="java.lang.String" />
+			<form-property name="tid" type="java.lang.String" ></form-property>
+			<form-property name="mid" type="java.lang.String" />
+			<form-property name="uid" type="java.lang.String" />
+			<form-property name="key" type="java.lang.String"/>
+			<form-property name="name" type="java.lang.String" />                   
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="username" type="java.lang.String"/>
+			<form-property name="mobile" type="java.lang.String"/>
+			<form-property name="password" type="java.lang.String"/>
+			<form-property name="license" type="java.lang.String"/>
+			<form-property name="cardfielis" type="org.apache.struts.upload.FormFile" />
+			<form-property name="cardfielthe" type="org.apache.struts.upload.FormFile" />
+			<form-property name="licensefile" type="org.apache.struts.upload.FormFile" />
+			<form-property name="code" type="java.lang.String"/>
+			<form-property name="money" type="java.lang.String"/>
+			<form-property name="order" type="java.lang.String"/>
+			<form-property name="card" type="java.lang.String"/>
+			<form-property name="province" type="java.lang.String"/>
+			<form-property name="city" type="java.lang.String"/>
+			<form-property name="county" type="java.lang.String"/>
+			<form-property name="address" type="java.lang.String"/>
+			<form-property name="bank" type="java.lang.String"/>
+			<form-property name="banktype" type="java.lang.String"/>
+			<form-property name="bankno" type="java.lang.String"/>
+			<form-property name="description" type="java.lang.String" />
+			<form-property name="poscode" type="java.lang.String" />
+			<form-property name="p" type="java.lang.String" />
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="phone" type="java.lang.String" />
+			<form-property name="discount" type="java.lang.String" />
+			<form-property name="describe" type="java.lang.String" />
+			<form-property name="number" type="java.lang.String" />
+			<form-property name="sid" type="java.lang.String" />
+			<form-property name="start" type="java.lang.String" />
+			<form-property name="end" type="java.lang.String" />
+			<form-property name="flag" type="java.lang.String" />
+			<form-property name="takemoney" type="java.lang.String" />
+			<form-property name="storename" type="java.lang.String" />
+			<form-property name="scope" type="java.lang.String" />
+			<form-property name="begin1" type="java.lang.String" />
+			<form-property name="end1" type="java.lang.String" />
+			<form-property name="begin2" type="java.lang.String" />
+			<form-property name="end2" type="java.lang.String" />
+			<form-property name="begin3" type="java.lang.String" />
+			<form-property name="end3" type="java.lang.String" />
+			<form-property name="note" type="java.lang.String" />
+			<form-property name="coordinates" type="java.lang.String" />
+			<form-property name="taxcard" type="java.lang.String" />
+			<form-property name="organization" type="java.lang.String" />
+			<form-property name="accredit" type="java.lang.String" />
+			<form-property name="storephone" type="java.lang.String" />
+			<form-property name="upgrade" type="java.lang.String" />
+			<form-property name="sysdate" type="java.lang.String" />
+			<form-property name="eid" type="java.lang.String" />
+			
+			<form-property name="rulename1" type="java.lang.String" />
+			<form-property name="discount1" type="java.lang.String" />
+			<form-property name="upgrade1" type="java.lang.String" />
+			
+			<form-property name="rulename2" type="java.lang.String" />
+			<form-property name="discount2" type="java.lang.String" />
+			<form-property name="upgrade2" type="java.lang.String" />
+			
+			<form-property name="rulename3" type="java.lang.String" />
+			<form-property name="discount3" type="java.lang.String" />
+			<form-property name="upgrade3" type="java.lang.String" />
+			
+			<form-property name="rulename4" type="java.lang.String" />
+			<form-property name="discount4" type="java.lang.String" />
+			<form-property name="upgrade4" type="java.lang.String" />
+			
+			<form-property name="rulename5" type="java.lang.String" />
+			<form-property name="discount5" type="java.lang.String" />
+			<form-property name="upgrade5" type="java.lang.String" />
+			
+			<form-property name="element1" type="java.lang.String" />
+			<form-property name="element2" type="java.lang.String" />
+			<form-property name="element3" type="java.lang.String" />
+			<form-property name="element4" type="java.lang.String" />
+			<form-property name="vipphoto" type="java.lang.String" />
+			<form-property name="sigen" type="java.lang.String" />
+			<form-property name="psigen" type="java.lang.String" />
+		</form-bean>	
+	</form-beans>
+
+    
+	<action-mappings>		
+		<action path="/dic"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="DiCForm" parameter="method" scope="request" validate="false">
+			<forward name="index" path="/cglib/index.jsp"/>
+			<forward name="gostore" path="/cglib/register/register_store.jsp"/>
+			<forward name="gobank" path="/cglib/register/register_bank.jsp"/>
+			<forward name="bill_total" path="/cglib/bill/bill_total.jsp" />
+			<forward name="getAuditShopList" path="/cglib/stores/stores_audit.jsp" />
+			<forward name="getThroughShopList" path="/cglib/stores/stores_list.jsp" />
+			<forward name="getBackShopList" path="/cglib/stores/stores_notby.jsp" />
+			<forward name="list" path="/cglib/stores/stores_notby.jsp" />
+			<forward name="getSalesList" path="/cglib/bill/bill_sales.jsp" />
+			<forward name="getUser" path="/cglib/account/account_basic.jsp" />
+			<forward name="getUsersInfo" path="/cglib/account/account_store.jsp" />
+			<forward name="getposcode" path="/cglib/account/account_pos.jsp" />
+			<forward name="getbankcard" path="/cglib/account/account_bank.jsp" />
+			<forward name="gomembers_list" path="/cglib/members/members_list.jsp" />
+			<forward name="findByIdShop" path="/cglib/stores/stores_update.jsp" />
+			<forward name="toCoupons" path="/cglib/activites/activites_add.jsp" />
+			<forward name="couponsList" path="/cglib/activites/activites_list.jsp" />
+			<forward name="findByIdcoupons" path="/cglib/dialog/activites.jsp" />
+			<forward name="vipCardList" path="/cglib/activites/vipCard_list.jsp" />
+			<forward name="findByIdVipCard" path="/cglib/dialog/vipCard.jsp" />
+			<forward name="findShop" path="/cglib/dialog/storesList.jsp" />
+			<forward name="getmerchantsMoney" path="/cglib/bill/bill_withdraw.jsp" />
+			<forward name="getMoneyList" path="/cglib/bill/bill_members.jsp" />
+			<forward name="vipCardOrder" path="/cglib/activites/vipCardOrder_list.jsp" />
+			<forward name="getUserOne" path="/cglib/account/account_basic_reset.jsp" />
+			<forward name="orderList" path="/cglib/bill/bill_total.jsp" />
+			<forward name="article" path="/cglib/article/article.jsp" />
+			<forward name="saveTemplatevip" path="/cglib/activites/template_add.jsp" />
+			<forward name="getTemplatevip" path="/cglib/activites/template_list.jsp" />
+			<forward name="govipCardAdd" path="/cglib/activites/vipdCard_add.jsp"/>
+			<forward name="orderChartList" path="/cglib/bill/bill_orderChart.jsp"/>
+			<forward name="promoteAdd" path="/cglib/dialog/tuiguang.jsp"/>
+			<forward name="getUserVipList" path="/cglib/activites/Vipconsumption_list.jsp"/>
+			<forward name="getVip"   path="/cglib/dialog/Viplist.jsp"/>
+			<forward name="salesProduct" path="/cglib/product/product_sales.jsp"/>
+			
+			<forward name="getNext" path="/cglib/register_info.jsp"/>
+			<forward name="indexList" path="/cglib/userindex.jsp"/>
+			<forward name="info" path="/temp/info.jsp"/>
+			<forward name="register_cybank" path="/cglib/register/register_cybank.jsp"/>
+			<forward name="to_register" path="/cglib/register/register_basic.jsp"/>
+			<forward name="to_register_invenst" path="/cglib/invenst/register_basic.jsp"/>
+			<forward name="to_register_cy" path="/cglib/register/register_cybasic.jsp"/>
+			
+		</action>		
+	</action-mappings>
+	
+	
+	
+    
+    
+    
+    
+
+	
+</struts-config>

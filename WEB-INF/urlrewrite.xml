@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.2.dtd">        
+<urlrewrite>
+
+
+<rule>  
+	   <from>^/hive_explain.shtml$</from>
+	  	<to>/cglib/activites/hive_explain.jsp</to>
+	</rule>
+<rule>  
+	   <from>^/hive.shtml$</from>
+	  	<to>/cglib/activites/hive.jsp</to>
+	</rule>
+  <!--蜂窝数据显示 -->
+	<rule>  
+	   <from>^/hive_pop.shtml$</from>
+	  <to>/admin.do?method=getHivePop</to>
+	</rule>
+
+    <!--计算积分返利  -->
+	<rule>  
+	   <from>^/count.shtml$</from>
+	  <to>/dic.do?method=count</to>
+	</rule>
+<!--积分提现查询  -->
+	<rule>  
+	   <from>^/check_integral.shtml$</from>
+	  <to>/tjix.do?method=check_Integral</to>
+	</rule>
+	
+	<!--计算积分提现  -->
+	<!--<rule>  
+	   <from>^/integral_withdraw.shtml$</from>
+	  <to>/admin.do?method=getIntegral</to>
+	</rule>-->
+	
+		<!--计算积分提现  -->
+	<!--<rule>  
+	   <from>^/pay.shtml$</from>
+	  <to>/tjix.do?method=drawIntegral</to>
+	</rule> -->
+
+	  <!--蜂窝模糊查询  -->
+	<rule>  
+	   <from>^/mobile.shtml$</from>
+	  <to>/admin.do?method=getMobile</to>
+	</rule>
+	<!--跨界联盟  目录查询搜索-->
+	<rule>  
+	   <from>^/get_moreall.shtml$</from>
+	  <to>/admin.do?method=getTypeGoods</to>
+	</rule>
+	<!--跨界联盟  广场接单-->
+	<rule>  
+	   <from>^/get_morebrand.shtml$</from>
+	  <to>/admin.do?method=getBrandGoods</to>
+	</rule>
+<!--跨界联盟  广场接单-->
+	<rule>  
+	   <from>^/myorder.shtml$</from>
+	  <to>/admin.do?method=SaveOrder</to>
+	</rule>
+	
+<!--跨界联盟  下架商品方法-->
+	<rule>  
+	   <from>^/down.shtml$</from>
+	  <to>/admin.do?method=removeOrder</to>
+	</rule>
+	
+	<!--跨界联盟  显示数据信息方法-->
+	<rule>  
+	   <from>^/data.shtml$</from>
+	  <to>/admin.do?method=getMyData</to>
+	</rule>
+	
+ <!--跨界联盟  发布商品方法-->
+	<rule>  
+	   <from>^/pub_method.shtml$</from>
+	  <to>/admin.do?method=pubMyGoods</to>
+	</rule>
+    <!--跨界联盟  发布商品-->
+	<rule>  
+	   <from>^/pub_good.shtml$</from>
+	  <to>/admin.do?method=pubGoods</to>
+	</rule>
+	
+	<!--跨界联盟  广场页面-->
+	<rule>  
+	   <from>^/union.shtml$</from>
+	  <to>/admin.do?method=ShowAllGoods</to>
+	</rule>
+	
+	<!--跨界联盟  接单管理页面-->
+	<rule>  
+	   <from>^/good_manager.shtml$</from>
+	  <to>/admin.do?method=ShowAllOrder</to>
+	</rule>
+	
+	<!--跨界联盟  发布管理页面-->
+	<rule>  
+	   <from>^/goods_publish.shtml$</from>
+	  <to>/admin.do?method=goodsPublish</to>
+	</rule>
+	
+	<!--跨界联盟  取消该商品发布-->
+	<rule>  
+	   <from>^/cancel_publish.shtml$</from>
+	  <to>/admin.do?method=cancelPublish</to>
+	</rule>
+	
+	
+	<!--帮助中心  -->
+	<rule>  
+	   <from>^/article.shtml$</from>
+	  <to>/dic.do?method=article</to>
+	</rule>
+	<!-- 默认首页 -->
+	<rule>
+	   <from>^/index.shtml$</from>
+	   <to>/dic.do?method=goIndex</to>
+	</rule>
+	
+	<!-- 账号注册页面-->
+	<rule>  
+	   <from>^/register_basic.shtml$</from>
+	    <to>/dic.do?method=toRegistered</to>
+	</rule>
+	
+	<!-- 账号注册页面(创富)-->
+	<rule>  
+	   <from>^/register_basic_invenst.shtml$</from>
+	    <to>/dic.do?method=toRegisteredByInvenst</to>
+	</rule>
+	
+	<!-- 商户基本信息 -->
+	<rule>  
+	   <from>^/register_store.shtml$</from>
+	   <to>/cglib/register/register_store.jsp</to>
+	</rule> 
+	
+	<!-- 商户基本信息(创富注册) -->
+	<rule>  
+	   <from>^/register_store_invenst.shtml$</from>
+	   <to>/cglib/invenst/register_store.jsp</to>
+	</rule> 
+	
+	
+	<!-- 安淘惠账户绑定银行卡时查询银行卡行号-->
+	<rule>  
+	   <from>^/to_query_bankno.shtml$</from>
+	   <to>/dic.do?method=queryBankNo</to>
+	</rule>
+	<!-- 创业身份证验证-->
+	<rule>  
+	   <from>^/to_query_merchantscybank.shtml$</from>
+	   <to>/dic.do?method=merchantscybank</to>
+	</rule>
+	
+	<!-- 商户绑定银行卡-->  
+	<rule>  
+	   <from>^/register_bank.shtml$</from>
+	   <to>/cglib/register/register_bank.jsp</to>
+	</rule>
+	<!-- 商户绑定银行卡（创业）-->  
+	<rule>  
+	   <from>^/register_cybank.shtml$</from>
+	   <to>/cglib/register/register_cybank.jsp</to>
+	</rule>
+	<!-- 商户绑定银行卡(创富)-->  
+	<rule>  
+	   <from>^/register_bank_invenst.shtml$</from>
+	   <to>/cglib/invenst/register_bank.jsp</to>
+	</rule>
+	
+	<!-- 注册完成-->
+	<rule>  
+	   <from>^/register_over.shtml$</from>
+	   <to>/cglib/register/register_over.jsp</to>
+	</rule>
+	
+	<!-- 注册完成(创富)-->
+	<rule>  
+	   <from>^/register_over_invenst.shtml$</from>
+	   <to>/cglib/invenst/register_over.jsp</to>
+	</rule>
+	
+	<rule>  
+	   <from>^/loadover.shtml$</from>
+	    <to>/dic.do?method=userList</to>
+	</rule>
+	<!-- 找回密码 -->
+	<rule>  
+	   <from>^/password_name.shtml$</from>
+	   <to>/cglib/password/password_name.jsp</to>
+	</rule>
+	<!-- 验证信息 -->
+	<rule>  
+	   <from>^/password_user.shtml$</from>
+	   <to>/cglib/password/password_user.jsp</to>
+	</rule>
+
+
+	<rule>  
+	   <from>^/password_reset.shtml$</from>
+	   <to>/cglib/password/password_reset.jsp</to>
+	</rule>
+	
+	
+	<!-- 重置密码 -->
+	<rule>  
+	   <from>^/password_over.shtml$</from>
+	   <to>/cglib/password/password_over.jsp</to>
+	</rule>
+	
+	<!-- 找回密码   检测手机号-->
+	<rule>  
+	   <from>^/retrieve_password.shtml$</from>
+	   <to>/tjix.do?method=retrievepassword</to>
+	</rule>
+	
+	
+	<!-- 找回密码-验证信息-->
+	<rule>  
+	   <from>^/retrievepassword_user.shtml$</from>
+	   <to>/tjix.do?method=retrievepassword_user</to>
+	</rule>
+	<!-- 找回密码-重置密码-->
+	<rule>  
+	   <from>^/retrievepassword_reset.shtml$</from>
+	   <to>/tjix.do?method=retrievepassword_reset</to>
+	</rule>
+	<!-- 商户详细信息-->
+	<rule>  
+	   <from>^/account_store.shtml$</from>
+	  <to>/dic.do?method=getUsersInfo</to>
+	</rule>
+
+	<rule>  
+	   <from>^/changermerchantsinfo.shtml$</from>
+	   <to>/tjix.do?method=changermerchantsinfo</to>
+	</rule>
+	
+	<!-- 预注册验证-->
+	<rule>  
+	   <from>^/pre-registration.shtml$</from>
+	   <to>/dic.do?method=contractList</to>
+	</rule>
+	<!-- 获取验证码 参数：mobile-->
+	<rule>  
+	   <from>^/getverificationcode.shtml$</from>
+	   <to>/dic.do?method=registeredone</to>
+	</rule>
+	<!-- 验证验证码是否正确 参数：mobile code-->
+	<rule>  
+	   <from>^/verificationcode.shtml$</from>
+	   <to>/dic.do?method=registeredtwo</to>
+	</rule>
+	
+	<!-- 验证验证码是否正确-->
+	<rule>  
+	   <from>^/registered.shtml$</from>
+	   <to>/dic.do?method=registered</to>
+	</rule>
+	<!-- 去修改页面 -->
+	<rule>  
+	   <from>^/go_password.shtml$</from>
+	   <to>/cglib/account/account_password.jsp</to>
+	</rule>
+	
+	<!-- 修改用户登录密码-->
+	<rule>  
+	   <from>^/account_password.shtml$</from>
+	   <to>/tjix.do?method=account_password</to>
+	</rule>
+	<!-- 商户基本数-->
+	<rule>  
+	   <from>^/merchantsinfo.shtml$</from>
+	   <to>/dic.do?method=merchantsinfo</to>
+	</rule>
+	
+	<!-- 注册时——商户绑定银行卡-->
+	<rule>  
+	   <from>^/merchantsbank.shtml$</from>
+	   <to>/dic.do?method=merchantsbank</to>
+	</rule>
+	
+	<!-- 商户登录-->
+	<rule>  
+	   <from>^/longin.shtml$</from>
+	   <to>/dic.do?method=longin</to>
+	</rule>
+	
+	<!--很据id获取商品-->
+	<rule>  
+	   <from>^/getUpdateManagement.shtml$</from>
+	  	 <to>/tjix.do?method=getUpdateManagement</to>
+	</rule>
+	<!-- 商品添加页面-->
+	<rule>  
+	   <from>^/commodity_add.shtml$</from>
+	   <to>/tjix.do?method=toMerchantsAddGoods</to>
+	</rule>
+	
+	<!-- 去商品添加页面-->
+	<rule>  
+	   <from>^/commodity_add_request.shtml$</from>
+	   <to>/tjix.do?method=commodity_add_request</to>
+	</rule>
+	
+	<!-- 上架商品下架操作 -->
+	<rule>  
+	   <from>^/updateshelvesCommodity.shtml$</from>
+	   <to>/tjix.do?method=updateshelvesCommodity</to>
+	</rule>
+	<!-- 商品已上架查询-->
+	<rule>  
+	   <from>^/product_lis_request.shtml$</from>
+	   <to>/tjix.do?method=product_uplist_request</to>
+	</rule>
+	
+	<!-- 销售统计页面 -->
+	<rule>  
+	   <from>^/product_count_request.shtml$</from>
+	   <!--<to>cglib/product/product_count.jsp</to>-->
+	     <to>/tjix.do?method=product_count_request</to> 
+	</rule>
+	
+	<!-- 商品待审核查询-->
+	<rule>  
+	   <from>^/product_Pendingauditlist_request.shtml$</from>
+	   <to>/tjix.do?method=product_Pendingauditlist_request</to>
+	</rule>
+
+	<!-- 商品未通过查询-->
+	<rule>  
+	   <from>^/product_Notthroughlist_request.shtml$</from>
+	   <to>/tjix.do?method=product_Notthroughlist_request</to>
+	</rule>
+	
+	<!-- 已下架商品-->
+	<rule>  
+	   <from>^/product_downlist_request.shtml$</from>
+	   <to>/tjix.do?method=product_downlist_request</to>
+	</rule>
+	<!-- 按名称模糊查询已上架商品 -->
+	<rule>  
+	   <from>^/productName_list_request.shtml$</from>
+	   <to>/tjix.do?method=productName_downlist_request</to>
+	</rule>
+	<!-- 按名称模糊查询已下架商品 -->
+	<rule>  
+	   <from>^/productName_uplist_request.shtml$</from>
+	   <to>/tjix.do?method=productName_uplist_request</to>
+	</rule>
+	
+	<!-- 按名称模糊查询待审核商品 -->
+	<rule>  
+	   <from>^/productName_Pendingauditlist_request.shtml$</from>
+	   <to>/tjix.do?method=productName_Pendingauditlist_request</to>
+	</rule>
+	
+	<!-- 按名称模糊查询未通过的商品 -->
+	<rule>  
+	   <from>^/productName_Notthroughlist_request.shtml$</from>
+	   <to>/tjix.do?method=productName_Notthroughlist_request</to>
+	</rule>
+	
+	<!-- 修商品，跳转到待审核列表 -->
+	<rule>  
+	   <from>^/commodity_Update_request.shtml$</from>
+	   <to>/tjix.do?method=commodity_Update_Pendingaudit</to>
+	</rule>
+	
+	
+	
+	<!-- 逻辑删除商品-->
+	<rule>  
+	   <from>^/delManagement.shtml$</from>
+	   <to>/tjix.do?method=delManagement</to>
+	</rule>
+		
+	
+
+	<!-- 商品未通过查询-->
+	<rule>  
+	   <from>^/stores_add_request.shtml$</from>
+	   <to>/tjix.do?method=stores_add_request</to>
+	</rule>	
+	
+	
+	
+	<!--查询商户的基本信息-->
+	<rule>  
+	   <from>^/getUser.shtml$</from>
+	   <to>/dic.do?method=getUser</to>
+	</rule>	
+	
+	<!--查询商户绑定的pos机-->
+	<rule>  
+	   <from>^/poscode.shtml$</from>
+	   <to>/dic.do?method=getposcode</to>
+	</rule>	
+	
+	<!--修改商户绑定的pos机-->
+	<rule>  
+	   <from>^/saveposcode.shtml$</from>
+	   <to>/dic.do?method=saveposcode</to>
+	</rule>	
+	
+	<!--查询商户绑定的银行卡-->
+	<rule>  
+	   <from>^/account_bankList.shtml$</from>
+	   <to>/dic.do?method=getbankcard</to>
+	</rule>	
+	
+	<!--修改商户绑定的银行卡-->
+	<rule>  
+	   <from>^/account_Updatebank.shtml$</from>
+	   <to>/dic.do?method=updateBankcard</to>
+	</rule>	
+	
+	
+	<!-- -调用接口检查身份证，姓名，卡号身份匹配 -->
+	<rule>  
+	   <from>^/checkBank.shtml$</from>
+	   <to>/dic.do?method=checkBank</to>
+	</rule>	
+	
+	
+	
+	
+	<!-- 去账户结算页面 -->
+	<rule>  
+	   <from>^/bill_total.shtml$</from>
+	   <to>/cglib/bill/bill_total.jsp</to>
+	</rule>
+	
+
+
+	
+	<!-- -去会员卡添加页面 -->
+	<rule>  
+	   <from>^/vipCard.shtml$</from>
+	   <to>/dic.do?method=govipCardAdd</to>
+	</rule>
+	
+	<!--去会员卡列表页 -->
+	<rule>  
+	   <from>^/vipCardList.shtml$</from>
+	    <to>/dic.do?method=vipCardList</to>
+	</rule>
+	<!-- 按名称查询会员卡 -->
+	<rule>  
+	   <from>^/getvipCardNameList.shtml$</from>
+	    <to>/dic.do?method=getvipCardNameList</to>
+	</rule>
+	
+	<!-- 添加会员卡 -->
+	<rule>  
+	   <from>^/saveVipCard.shtml$</from>
+	   <to>/dic.do?method=saveVipCard</to>
+	</rule>
+	
+	<!-- 根据id查询会员卡信息 -->
+	<rule>  
+	   <from>^/findByIdVipCard.shtml$</from>
+	   <to>/dic.do?method=findByIdVipCard</to>
+	</rule>
+	
+		
+	
+	
+
+	<!-- 分类（树形菜单） -->
+	<rule>  
+	   <from>^/typeList.shtml$</from>
+	   <to>/dic.do?method=typeList</to>
+	</rule>
+
+	<!-- 查询会员卡订单数据 -->
+	<rule>  
+	   <from>^/vipCardOrder.shtml$</from>
+	   <to>/dic.do?method=vipCardOrder</to>
+	</rule>
+	
+	<!-- 按日期查询会员卡订单数据 -->
+	<rule>  
+	   <from>^/vipCardOrderTime.shtml$</from>
+	   <to>/dic.do?method=vipCardOrderTime</to>
+	</rule>
+	
+	<!-- 没填写  去认证信息 -->
+	<rule>  
+	   <from>^/gostore.shtml$</from>
+	   <to>/dic.do?method=gostore</to>
+	</rule>
+	
+	<rule>  
+	   <from>^/gobank.shtml$</from>
+	   <to>/dic.do?method=gobank</to>
+	</rule>
+	
+	
+	<!-- 查询商户 账户总金额 -->
+	<rule>  
+	   <from>^/bill_withdraw.shtml$</from>
+	   <to>/tjix.do?method=getsettlementList</to>
+	</rule>
+	
+	<!--查询商户提现申请记录 -->
+	<rule>  
+	   <from>^/bill_members.shtml$</from>
+	   <to>/tjix.do?method=gettakemoneyList</to>
+	</rule>
+	
+	
+	<!--查询商户蜂巢 -->
+	<rule>  
+	   <from>^/gethiveaction.shtml$</from>
+	   <to>/tjix.do?method=getHiveMerchantsDetails</to>
+	</rule>
+	
+	<!--查询用户蜂巢 -->
+	<rule>  
+	   <from>^/getuserhiveaction.shtml$</from>
+	   <to>/tjix.do?method=getHiveUserDetails</to>
+	</rule>
+	
+	<!--时时查询推广的商家获利明细 -->
+	<rule>  
+	   <from>^/getMerchantsHiveDataRealTime.shtml$</from>
+	   <to>/tjix.do?method=getMerchantsHiveDataRealTime</to>
+	</rule>
+	
+	<!-- 商户立即提现操作 -->
+	<rule>  
+	   <from>^/updateSettlement.shtml$</from>
+	   <to>/tjix.do?method=updateSettlement</to>
+	</rule>
+	
+		<!--按日期查询商户提现记录 -->
+	<rule>  
+	   <from>^/gettakemoneyTime.shtml$</from>
+	   <to>/tjix.do?method=gettakemoneyTime</to>
+	</rule>
+	
+	<!-- 查询商户收入明细 -->
+	<rule>  
+	   <from>^/bill_pos.shtml$</from>
+	   <to>/tjix.do?method=getincomedetailmoneyList</to>
+	</rule>
+	
+	<!-- 按日期查询商户收入明细 -->
+	<rule>  
+	   <from>^/bill_postime.shtml$</from>
+	   <to>/tjix.do?method=getincomedetailmoneyTime</to>
+	</rule>
+	
+	<!-- 查询商户订单数据(线下预约) -->
+	<rule>  
+	   <from>^/billtOrdrdatarecord.shtml$</from>
+	   <to>/tjix.do?method=getOrdrdatarecordList</to>
+	</rule>
+	<!-- 查询商户订单数据(线上购买) -->
+	<rule>  
+	   <from>^/getorderBuyList.shtml$</from>
+	   <to>/tjix.do?method=getorderBuyList</to>
+	</rule>
+	
+	<!-- 按日期查询订单列表（线上支付的） -->
+	<rule>  
+	   <from>^/billtOrdrdtime.shtml$</from>
+	   <to>/tjix.do?method=getOrdrdatarecordTime</to>
+	</rule>	
+
+
+	<!-- 查询订单的收货人地址 -->
+	<rule>  
+	   <from>^/getUserAddress.shtml$</from>
+	   <to>/tjix.do?method=getUserAddressList</to>
+	</rule>	
+	
+	<!-- 商家按订单给用户发货 -->
+	<rule>  
+	   <from>^/merchantsDeliver.shtml$</from>
+	   <to>/tjix.do?method=merchantsDeliver</to>
+	</rule>	
+	
+
+	
+	<!-- 根据id查询用户信息 修改logo -->
+	<rule>  
+	   <from>^/account_basic.shtml$</from>
+	   <to>/dic.do?method=getUserOne</to>
+	</rule>
+	
+	<!-- 修改商户信息（logo修改） -->
+	<rule>  
+	   <from>^/updateUserOne.shtml$</from>
+	   <to>/dic.do?method=updateUserOne</to>
+	</rule>
+	
+	
+		<!-- 折线图 -->
+	<rule>  
+	   <from>^/orderList.shtml$</from>
+	   <to>/dic.do?method=orderList</to>
+	</rule>
+	
+	<!-- 根据id查询订单数据 -->
+	<rule>  
+	   <from>^/orderOne.shtml$</from>
+	   <to>/tjix.do?method=getOrdrdatarecordOne</to>
+	</rule>
+	
+	<!-- 订单状态修改 -->
+	<rule>  
+	   <from>^/updateorder.shtml$</from>
+	   <to>/tjix.do?method=updateorder</to>
+	</rule>
+	
+	<!-- 安淘惠会员卡模板查询 -->
+	<rule>  
+	   <from>^/getTemplatevip.shtml$</from>
+	   <to>/dic.do?method=getTemplatevip</to>
+	</rule>
+	
+		<!-- 安淘惠添加会员卡模板-->
+	<rule>  
+	   <from>^/saveTemplatevip.shtml$</from>
+	   <to>/dic.do?method=saveTemplatevip</to>
+	</rule>
+	
+	<!-- 去会员卡模板添加页面 -->
+	<rule>  
+	   <from>^/template_add.shtml$</from>
+	   <to>/cglib/activites/template_add.jsp</to>
+	</rule>
+	
+	<!-- 帮助地址连接 -->
+	<rule>  
+	   <from>^/article_product.shtml$</from>
+	   <to>/cglib/article/product.jsp</to>
+	</rule>
+	<rule>  
+	   <from>^/article_vip.shtml$</from>
+	   <to>/cglib/article/vip.jsp</to>
+	</rule>
+	<rule>  
+	   <from>^/article_withdraw.shtml$</from>
+	   <to>/cglib/article/withdraw.jsp</to>
+	</rule>
+	<rule>  
+	   <from>^/article_password.shtml$</from>
+	   <to>/cglib/article/password.jsp</to>
+	</rule>
+	
+	
+	
+	<!--去申请加盟页 -->
+	
+	<rule>  
+	   <from>^/apply.shtml$</from>
+	   <to>/cglib/register/register_apply.jsp</to>
+	</rule>
+	
+	<!--添加申请加盟信息 -->
+	<rule>  
+	   <from>^/saveapply.shtml$</from>
+	   <to>/tjix.do?method=saveapply</to>
+	</rule>
+	
+	
+	
+	<!--立即提现时检测手机号是否是当前登录账户的手机号-->
+	<rule>  
+	   <from>^/checkPhoneBill.shtml$</from>
+	   <to>/tjix.do?method=checkPhoneBill</to>
+	</rule>
+	
+	
+		<!--立即提现时检测短信验证码-->
+	<rule>  
+	   <from>^/checkbillredtwo.shtml$</from>
+	   <to>/tjix.do?method=checkbillredtwo</to>
+	</rule>
+	
+	<!-- 订单图表统计 -->
+	<rule>  
+	   <from>^/orderChartList.shtml$</from>
+	   <to>/dic.do?method=orderChartList</to>
+	</rule>
+	
+	<!-- 去推广链接页面 -->
+	<rule>  
+	   <from>^/promote.shtml$</from>
+	   <to>/cglib/activites/promote.jsp</to>
+	</rule>
+	
+	<!-- 生成推广链接 -->
+	<rule>  
+	   <from>^/promoteAdd.shtml$</from>
+	   <to>/dic.do?method=promoteAdd</to>
+	</rule>
+	<!-- 去修改提现密码页面 -->
+	<rule>  
+	   <from>^/takePassword.shtml$</from>
+	   <to>/cglib/account/take_password.jsp</to>
+	</rule>
+	
+	<!-- 修改提现密码-->
+	<rule>  
+	   <from>^/updateTakePasswod.shtml$</from>
+	   <to>/dic.do?method=updateTakePasswod</to>
+	</rule>
+	
+	<!--查询我的推广会员消费 -->
+	<rule>  
+	   <from>^/getUserVipList.shtml$</from>
+	   <to>/dic.do?method=getUserVipList</to>
+	</rule>
+	
+	<rule>  
+	   <from>^/getVip.shtml$</from>
+	   <to>/dic.do?method=getVip</to>
+	</rule>
+	
+	<!--查询我的推广会员(根据账号) -->
+	<rule>  
+	   <from>^/getUserNameVipList.shtml$</from>
+	   <to>/dic.do?method=getUserNameVipList</to>
+	</rule>
+	
+	
+	<!--根据id查询商品销量统计 -->
+	<rule>  
+	   <from>^/salesProduct.shtml$</from>
+	   <to>/dic.do?method=salesProduct</to>
+	</rule>
+	
+	
+	<!-- 图片上传公共方法 -->
+	<rule>  
+	   <from>^/Upload.shtml$</from>
+	   <to>/tjix.do?method=Upload</to>
+	</rule>
+	
+	
+	<!--改版后登录跳转的首页 -->
+	<rule>  
+	   <from>^/indexList.shtml$</from>
+	   <to>/dic.do?method=indexList</to>
+	</rule>
+	<!-- 去修改提现密码页面 -->
+	<rule>  
+	   <from>^/register.shtml$</from>
+	   <to>/cglib/register/register_basic.jsp</to>
+	</rule>
+	
+	
+	<!--测试 -->
+	<rule>  
+	   <from>^/utemso.shtml$</from>
+	   <to>/tjix.do?method=getHiveDetails</to>
+	</rule>
+	
+	<!--去创富系统首页-->
+	<rule>  
+	   <from>^/investIndex.shtml$</from>
+	   <to>/authority.do?method=toInvestIndex</to>
+	</rule>
+	
+	<!--去创富系统首页-->
+	<rule>  
+	   <from>^/invenstTglist.shtml$</from>
+	   <to>/authority.do?method=getMerchantsInvenstList</to>
+	</rule>
+	
+	<!--去去购买-->
+	<rule>  
+	   <from>^/toBuyInvenst.shtml$</from>
+	   <to>/authority.do?method=toBuyInvenst</to>
+	</rule>
+	
+	<!--去自身推广页面-->
+	<rule>  
+	   <from>^/invenstSpread.shtml$</from>
+	   <to>/authority.do?method=invenstSpread</to>
+	</rule>
+	
+	<!--生成创富礼包系统并跳转到支付页面-->
+	<rule>  
+	   <from>^/saveMerchantsOrder.shtml$</from>
+	   <to>/authority.do?method=saveMerchantsOrder</to>
+	</rule>
+	
+	
+	<!--生成创富礼包系统并跳转到支付页面-->
+	<rule>  
+	   <from>^/commit_pay.shtml$</from>
+	   <to>/authority.do?method=commitPay</to>
+	</rule>
+	
+	<!--生成创富礼包系统并跳转到支付页面-->
+	<rule>  
+	   <from>^/confirm_pay.shtml$</from>
+	   <to>/authority.do?method=confirmPay</to>
+	</rule>
+	
+	<!--生成创富礼包系统并跳转到支付页面-->
+	<rule>  
+	   <from>^/readem_pay.shtml$</from>
+	   <to>/authority.do?method=reademPay</to>
+	</rule>
+	
+	
+	<!--支付成功后后台执行方法(创富)-->
+	<rule>  
+	   <from>^/paysuccess.shtml$</from>
+	   <to>/authority.do?method=paySuccess</to>
+	</rule>
+	
+	<!--支付成功后后台执行方法（就业）-->
+	<rule>  
+	   <from>^/paysuccess_pioneer.shtml$</from>
+	   <to>/authority.do?method=payPioneerSuccess</to>
+	</rule>
+	
+	
+	<!--分润接口 -->
+	<rule>  
+	   <from>^/deductions.shtml$</from>
+	   <to>/dic.do?method=deductions</to>
+	</rule>
+	
+	<!--去创业中心首页-->
+	<rule>  
+	   <from>^/pioneerIndex.shtml$</from>
+	   <to>/authority.do?method=toPioneerIndex</to>
+	</rule>
+	
+	<!-- 创业中心注册 -->
+
+	<rule>  
+	   <from>^/pioneer_add_request.shtml$</from>
+	  <to>/authority.do?method=savePioneerOrder</to>
+	</rule>
+
+	<rule>  
+	   <from>^/pioneerExplain.shtml$</from>
+	  <to>/authority.do?method=toInvestExplain</to>
+	</rule>
+	
+	
+	<!-- 创业中心注册 申请完成后-->
+
+	<rule>  
+	   <from>^/pioneerDetail.shtml$</from>
+	  <to>/authority.do?method=toPioneerDetail</to>
+	</rule>
+	
+	<!-- 查询提现记录-->
+
+	<rule>  
+	   <from>^/pioneer_withdraw_deposit_detail.shtml$</from>
+	  <to>/authority.do?method=pioneerWithdrawDepositDetail</to>
+	</rule>
+	
+	<!-- 去申请提现 -->
+
+	<rule>  
+	   <from>^/to_pioneer_withdraw_deposit.shtml$</from>
+	  <to>/authority.do?method=toPioneerWithdrawDeposit</to>
+	</rule>
+	
+	
+	<!-- 提现申请 -->
+
+	<rule>  
+	   <from>^/pioneer_withdraw_deposit.shtml$</from>
+	  <to>/authority.do?method=pioneerWithdrawDeposit</to>
+	</rule>
+	
+	<!-- 提现申请 -->
+
+	<rule>  
+	   <from>^/pioneer_withdraw_deposit_recommend.shtml$</from>
+	  <to>/authority.do?method=pioneerWithdrawDepositRecommend</to>
+	</rule>
+	
+	<!--创业注册信息提交 -->
+	<rule>  
+	   <from>^/registeredEntrepreneurship.shtml$</from>
+	   <to>/dic.do?method=registeredEntrepreneurship</to>
+	</rule>
+	
+	<!--创业注册信息提交 -->
+	<rule>  
+	   <from>^/registeredinfo.shtml$</from>
+	   <to>/dic.do?method=registeredinfo</to>
+	</rule>
+
+	<!--去创业注册页面 -->
+	<rule>  
+	   <from>^/toRegisteredEntrepreneurship.shtml$</from>
+	   <to>/dic.do?method=toRegisteredEntrepreneurship</to>
+	</rule>
+	
+	<!--去显示查看明细页面-->
+	<rule>  
+	   <from>^/toSeedetailsPioneer.shtml$</from>
+	   <to>/authority.do?method=toSeedetailsPioneer</to>
+	</rule>
+	
+	<!-- 查询创业中心资源码是否可用 -->
+	<rule>  
+	   <from>^/togetContract.shtml$</from>
+	   <to>/authority.do?method=getContract</to>
+	</rule>
+	
+	<!-- 获取创业系统一个星期的数据 -->
+	<rule>  
+	   <from>^/togetObjectlist.shtml$</from>
+	   <to>/authority.do?method=getObjectlist</to>
+	</rule>
+
+	<!-- 创富系统 -->
+	<rule>  
+	   <from>^/getBankcardTypeByCardno.shtml$</from>
+	   <to>/authority.do?method=getBankCardTypeByCardno</to>
+	</rule>
+
+	
+	<!-- 查看直推用户的返利情况-->
+	<rule>  
+	   <from>^/getRturnDetailByMid.shtml$</from>
+	   <to>/authority.do?method=getRturnDetailByMid</to>
+	</rule>
+	
+	<!-- 异步查看用户返利情况-->
+	<rule>  
+	   <from>^/getRturnDetailRealByMid.shtml$</from>
+	   <to>/authority.do?method=getRturnDetailRealByMid</to>
+	</rule>
+	
+	<!-- 公司公告 -->
+	<!-- 查询全部公告 -->
+	<rule>  
+	   <from>^/getNotice.shtml$</from>
+	   <to>/authority.do?method=getNotice</to>
+	</rule>
+	
+	<!-- 查看公告详情 -->
+	<rule>  
+	   <from>^/toGetNoticeAnnouncement.shtml$</from>
+	   <to>/authority.do?method=getNoticeById</to>
+	</rule>
+	
+	<!-- 绑定银行卡 -->
+	<rule>  
+	   <from>^/merchantsBindbank.shtml$</from>
+	   <to>/dic.do?method=merchantsBindbank</to>
+	</rule>
+
+	
+	<!-- 以下为创业系统移动端接口方法配置 -->
+	<!-- 用户登录接口 -->
+	<rule>  
+	   <from>^/login_mob.shtml$</from>
+	   <to>/admin.do?method=login</to>
+	</rule>
+	<!-- 用户注册接口 -->
+	<rule>  
+	   <from>^/register_mob.shtml$</from>
+	   <to>/admin.do?method=register</to>
+	</rule>
+	<!-- 用户注册获取验证码接口 -->
+	<rule>  
+	   <from>^/getCodeByRegister_mob.shtml$</from>
+	   <to>/admin.do?method=getCodeByRegister</to>
+	</rule>
+	<!-- 找回密码 -->
+	<!-- 验证手机是否存在接口 -->
+	<rule>  
+	   <from>^/checkPhone_mob.shtml$</from>
+	   <to>/admin.do?method=getPasswordCheckPhone</to>
+	</rule>
+	<!-- 用户找回密码获取验证码接口 -->
+	<rule>  
+	   <from>^/getCode_mob.shtml$</from>
+	   <to>/admin.do?method=getCode</to>
+	</rule>
+	<!-- 用户修改密码接口 -->
+	<rule>  
+	   <from>^/updPassword_mob.shtml$</from>
+	   <to>/admin.do?method=resetPassword</to>
+	</rule>
+	<!-- 生成创业系统的订单 -->
+	<rule>  
+	   <from>^/savePioneerOrder_mob.shtml$</from>
+	   <to>/admin.do?method=savePioneerOrder</to>
+	</rule>
+	<!-- 获取银行卡类型接口 -->
+	<rule>  
+	   <from>^/getCardType_mob.shtml$</from>
+	   <to>/admin.do?method=getCardType</to>
+	</rule>
+	<!-- 获取付款校验码接口 -->
+	<rule>  
+	   <from>^/paymentCode_mob.shtml$</from>
+	   <to>/admin.do?method=getPaymentCode</to>
+	</rule>
+	<!-- 订单提交支付接口 -->
+	<rule>  
+	   <from>^/confirmPay_mob.shtml$</from>
+	   <to>/admin.do?method=confirmPay</to>
+	</rule>
+	
+
+	<!-- 查看创业说明接口 -->
+	<rule>  
+	   <from>^/getBusinessExplain_mob.shtml$</from>
+	   <to>/admin.do?method=getBusinessExplain</to>
+	</rule>
+	<!-- 获取创业系统一个星期的数据 -->
+	<rule>  
+	   <from>^/getObjectlist_mob.shtml$</from>
+	   <to>/admin.do?method=getObjectlist</to>
+	</rule>
+	<!-- 查看获得的创业中心明细 -->
+	<rule>  
+	   <from>^/getBusinessByTradeType_mob.shtml$</from>
+	   <to>/admin.do?method=getBusinessByTradeType</to>
+	</rule>
+
+	<!--测试创业系统分红  -->
+	<rule>  
+	   <from>^/hong.shtml$</from>
+	   <to>/authority.do?method=shareBonus</to>
+	</rule>
+	
+
+
+</urlrewrite>
+

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.2.dtd">        
+<urlrewrite>
+<!--退出登录-->
+<rule>  
+   <from>^/loginout.xhtml$</from>
+   <to>/dic.do?method=loginout</to>
+</rule>
+
+<!--首页登录-->
+<rule>  
+   <from>^/index.html$</from>
+   <to>/admin.do?method=index</to>
+</rule>
+<!--个人商户注册-->
+<rule>  
+   <from>^/to_register_person.html$</from>
+   <to>/admin.do?method=toRegisterPerson</to>
+</rule>
+<!--个人商户注册-->
+<rule>  
+   <from>^/register_person.html$</from>
+   <to>/admin.do?method=registerPerson</to>
+</rule>
+<!--个人商户认证-->
+<rule>  
+   <from>^/to_register_person_authentication.html$</from>
+   <to>/admin.do?method=toRegisterPersonAuthentication</to>
+</rule>
+<!--个人商户绑定银行卡-->
+<rule>  
+   <from>^/to_register_person_cart.html$</from>
+   <to>/admin.do?method=toRegisterPersonCart</to>
+</rule>
+<!--个人商户绑定银行卡-->
+<rule>  
+   <from>^/register_person_cart.html$</from>
+   <to>/admin.do?method=registerPersonCart</to>
+</rule>
+<!--个人商户绑定银行卡-->
+<rule>  
+   <from>^/to_register_person_finish.html$</from>
+   <to>/admin.do?method=toRegisterPersonFinish</to>
+</rule>
+<!--个人商户注册-->
+<rule>  
+   <from>^/register_person_confirm.html$</from>
+   <to>/admin.do?method=registerPersonConfirm</to>
+</rule>
+
+<!--商户注册-->
+<rule>  
+   <from>^/to_register_company.html$</from>
+   <to>/admin.do?method=toRegisterCompany</to>
+</rule>
+<!--商户注册-->
+<rule>  
+   <from>^/register_company.html$</from>
+   <to>/admin.do?method=registerCompany</to>
+</rule>
+<!--个人商户认证-->
+<rule>  
+   <from>^/to_register_company_authentication.html$</from>
+   <to>/admin.do?method=toRegisterCompanyAuthentication</to>
+</rule>
+<!--个人商户绑定银行卡-->
+<rule>  
+   <from>^/to_register_company_cart.html$</from>
+   <to>/admin.do?method=toRegisterCompanyCart</to>
+</rule>
+<!--个人商户绑定银行卡-->
+<rule>  
+   <from>^/register_company_cart.html$</from>
+   <to>/admin.do?method=registerCompanyCart</to>
+</rule>
+<!--个人商户绑定银行卡-->
+<rule>  
+   <from>^/to_register_company_finish.html$</from>
+   <to>/admin.do?method=toRegisterCompanyFinish</to>
+</rule>
+<!--个人商户注册-->
+<rule>  
+   <from>^/register_company_confirm.html$</from>
+   <to>/admin.do?method=registerCompanyConfirm</to>
+</rule>
+<!--个人商户注册-->
+<rule>  
+   <from>^/get_sms_code.html$</from>
+   <to>/admin.do?method=getSmsCode</to>
+</rule>
+
+<!--检查手机是否注册-->
+<rule>  
+   <from>^/is_mobile_number_exist.html$</from>
+   <to>/admin.do?method=isMobileNumberExist</to>
+</rule>
+
+<!--检查邮箱是否注册-->
+<rule>  
+   <from>^/is_email_exist.html$</from>
+   <to>/admin.do?method=isEmailExist</to>
+</rule>
+<!--检查用户是否注册-->
+<rule>  
+   <from>^/get_province_city_county_json.html$</from>
+   <to>/admin.do?method=getProvinceCityCountyJson</to>
+</rule>
+
+<!--跳转到登录页面-->
+<rule>  
+   <from>^/to_login.html$</from>
+   <to>/admin.do?method=toLogin</to>
+</rule>
+<!--个人商户登录-->
+<rule>  
+   <from>^/login_person.html$</from>
+   <to>/admin.do?method=loginPerson</to>
+</rule>
+
+<!--企业商户登录-->
+<rule>  
+   <from>^/login_company.html$</from>
+   <to>/admin.do?method=loginCompany</to>
+</rule>
+<!--跳转到忘记密码页面-->
+<rule>  
+   <from>^/to_login_get_password.html$</from>
+   <to>/admin.do?method=toLoginGetPassword</to>
+</rule>
+<!--跳转到忘记密码页面-->
+<rule>  
+   <from>^/login_get_password.html$</from>
+   <to>/admin.do?method=loginGetPassword</to>
+</rule>
+<!--跳转到重设密码页面-->
+<rule>  
+   <from>^/to_login_reset_password.html$</from>
+   <to>/admin.do?method=toLoginResetPassword</to>
+</rule>
+<!--跳转到重设密码页面-->
+<rule>  
+   <from>^/login_reset_password.html$</from>
+   <to>/admin.do?method=loginResetPassword</to>
+</rule>
+<!--跳转到个人商户中心页面-->
+<rule>  
+   <from>^/center_person.html$</from>
+   <to>/admin.do?method=centerPerson</to>
+</rule>
+<!--跳转到个人商户中心管理页面-->
+<rule>  
+   <from>^/center_manage.html$</from>
+   <to>/admin.do?method=centerManage</to>
+</rule>
+
+<!--跳转到企业商户中心-->
+<rule>  
+   <from>^/center_company.html$</from>
+   <to>/admin.do?method=centerCompany</to>
+</rule>
+
+
+<!--得到行业-->
+<rule>  
+   <from>^/get_category_json.html$</from>
+   <to>/admin.do?method=getCategoryJson</to>
+</rule>
+<!--跳转到添加分店-->
+<rule>  
+   <from>^/to_merchant_branch_add.html$</from>
+   <to>/admin.do?method=toMerchantBranchAdd</to>
+</rule>
+<!--添加分店-->
+<rule>  
+   <from>^/merchant_branch_add.html$</from>
+   <to>/admin.do?method=merchantBranchAdd</to>
+</rule>
+<!--分店列表-->
+<rule>  
+   <from>^/merchant_branch_list.html$</from>
+   <to>/admin.do?method=merchantBranchList</to>
+</rule>
+<!--分店列表-->
+<rule>  
+   <from>^/merchant_branch_wait_list.html$</from>
+   <to>/admin.do?method=merchantBranchWaitList</to>
+</rule>
+<!--分店列表-->
+<rule>  
+   <from>^/merchant_branch_edit_list.html$</from>
+   <to>/admin.do?method=merchantBranchEditList</to>
+</rule>
+<!--分店列表-->
+<rule>  
+   <from>^/to_merchant_branch_edit.html$</from>
+   <to>/admin.do?method=toMerchantBranchEdit</to>
+</rule>
+<!--分店列表-->
+<rule>  
+   <from>^/merchant_branch_edit.html$</from>
+   <to>/admin.do?method=merchantBranchEdit</to>
+</rule>
+<!--去提现页面-->
+<rule>  
+   <from>^/to_withdrawal_person.html$</from>
+   <to>/admin.do?method=toWithdrawalPerson</to>
+</rule>
+<!--提现-->
+<rule>  
+   <from>^/withdrawal_person.html$</from>
+   <to>/admin.do?method=withdrawalPerson</to>
+</rule>
+
+<!--去提现页面-->
+<rule>  
+   <from>^/to_withdrawal_company.html$</from>
+   <to>/admin.do?method=toWithdrawalCompany</to>
+</rule>
+<!--提现-->
+<rule>  
+   <from>^/withdrawal_company.html$</from>
+   <to>/admin.do?method=withdrawalCompany</to>
+</rule>
+
+<!-- ------------------------ -->
+<!-- 账号注册 beg-->
+<rule>  
+   <from>^/register_basic.html$</from>
+   <to>/cglib/register/register_basic.jsp</to>
+</rule>
+<rule>  
+   <from>^/register_store.html$</from>
+   <to>/cglib/register/register_store.jsp</to>
+</rule>
+<rule>  
+   <from>^/register_bank.html$</from>
+   <to>/cglib/register/register_bank.jsp</to>
+</rule>
+<rule>  
+   <from>^/register_over.html$</from>
+   <to>/cglib/register/register_over.jsp</to>
+</rule>
+<!-- 账号注册 end-->
+
+<!-- 找回密码 beg-->
+<rule>  
+   <from>^/password_name.html$</from>
+   <to>/cglib/password/password_name.jsp</to>
+</rule>
+<rule>  
+   <from>^/password_user.html$</from>
+   <to>/cglib/password/password_user.jsp</to>
+</rule>
+<rule>  
+   <from>^/password_reset.html$</from>
+   <to>/cglib/password/password_reset.jsp</to>
+</rule>
+<rule>  
+   <from>^/password_over.html$</from>
+   <to>/cglib/password/password_over.jsp</to>
+</rule>
+<!-- 找回密码 end-->
+
+
+
+<!-- 商品管理 beg-->
+<rule>  
+   <from>^/product_list.html$</from>
+   <to>/cglib/product/product_list.jsp</to>
+</rule>
+<rule>  
+   <from>^/product_audit.html$</from>
+   <to>/cglib/product/product_audit.jsp</to>
+</rule>
+<rule>  
+   <from>^/product_cancel.html$</from>
+   <to>/cglib/product/product_cancel.jsp</to>
+</rule>
+<rule>  
+   <from>^/product_notby.html$</from>
+   <to>/cglib/product/product_notby.jsp</to>
+</rule>
+<rule>  
+   <from>^/product_add.html$</from>
+   <to>/cglib/product/product_add.jsp</to>
+</rule>
+<!-- 商品管理 end-->
+
+
+<!-- 分店管理 beg-->
+<rule>  
+   <from>^/stores_list.html$</from>
+   <to>/cglib/stores/stores_list.jsp</to>
+</rule>
+<rule>  
+   <from>^/stores_audit.html$</from>
+   <to>/cglib/stores/stores_audit.jsp</to>
+</rule>
+<rule>  
+   <from>^/stores_notby.html$</from>
+   <to>/cglib/stores/stores_notby.jsp</to>
+</rule>
+<rule>  
+   <from>^/stores_add.html$</from>
+   <to>/cglib/stores/stores_add.jsp</to>
+</rule>
+<!-- 分店管理 end-->
+</urlrewrite>
+

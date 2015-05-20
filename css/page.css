@@ -1,0 +1,24 @@
+@charset "utf-8";
+/***
+@Author:     webpoin
+@Email:      1357113262@qq.com
+***/
+
+.ajaxpage{position: relative; }
+
+.ajaxpage a{float:left; border:0; margin:0; padding:0; font-size:11px; list-style:none;  border:solid 1px #9aafe5; margin-right:2px; }
+.ajaxpage a:link,
+.ajaxpage a:visited {float:left; color:#0e509e;  padding:3px 6px; text-decoration:none;}
+.ajaxpage a:hover { border:solid 1px #0e509e; }
+
+/*上一页下一页*/
+.ajaxpage .prev,
+.ajaxpage .next{ border:solid 1px #DEDEDE; color:#888888; display:block; float:left; font-weight:bold; margin-right:2px; padding:3px 4px; }
+
+/*首页尾页*/
+.ajaxpage a.first,
+.ajaxpage a.last{font-weight:bold; }	
+
+/*当前页*/
+.ajaxpage a.current{ background:#2e6ab1; color:#fff; font-weight:bold; display:block; float:left; padding:4px 6px; /* savers */ margin-right:2px; }
+

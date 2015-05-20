@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+	<description>pjwap jsp2 tags.</description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>PjwapTagLibrary</short-name>
+    <function> 
+		<description>cutString</description>
+		<name>cutString</name>    
+		<function-class>com.seleyuan.util.StringUtil</function-class> 
+		<function-signature>String cutString(java.lang.String, int)</function-signature>
+	</function>
+    <function> 
+		<description>cutString not add "..."</description>
+		<name>simpleCutString</name>    
+		<function-class>com.seleyuan.util.StringUtil</function-class> 
+		<function-signature>String simpleCutString(java.lang.String, int)</function-signature>
+	</function>
+	<function> 
+		<description>cutStringBy</description>
+		<name>cutStringBy</name>    
+		<function-class>com.seleyuan.util.StringUtil</function-class> 
+		<function-signature>String cutStringBy(java.lang.String, int, java.lang.String)</function-signature>
+	</function>
+	<function> 
+		<description>replaceString</description>
+		<name>replaceString</name>    
+		<function-class>com.seleyuan.util.StringUtil</function-class> 
+		<function-signature>String replaceString(java.lang.String)</function-signature>
+	</function>
+
+	<function> 
+		<description>getFlatByID</description>
+		<name>getFlatByID</name>    
+		<function-class>com.seleyuan.util.Util</function-class> 
+		<function-signature>String getFlatByID(java.lang.String)</function-signature>
+	</function>
+
+	<tag/>
+</taglib>

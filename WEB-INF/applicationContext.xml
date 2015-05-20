@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<bean id="JmshtDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+			 <property name="driverClassName">
+				<value>org.gjt.mm.mysql.Driver</value>
+			</property>
+			<property name="url">
+				<value>jdbc:mysql://114.215.239.103:3380/anzipay_union?useUnicode=true&amp;characterEncoding=utf-8</value>
+			</property>
+			<property name="username">
+				<value>anzipay_union</value> 
+			</property>
+			<property name="password">
+				<value>11AnzipayLock#901199111</value>
+			</property>
+		</bean> 
+		<import resource="spring-session.xml"/>
+</beans>
